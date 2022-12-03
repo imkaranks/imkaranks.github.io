@@ -1,9 +1,4 @@
-
-
 /* ===[ General Stylings ]=== */
-
-
-/* === Primary Footer === */
 /* ===[ Compositions ]=== */
 .section-header {
     line-height: 1;
@@ -17,8 +12,6 @@
 }
 
 .section-subtitle {
-    /* padding-left: 1em; */
-    /* font-family: monospace; */
     letter-spacing: 2px;
     width: fit-content;
 }
@@ -28,10 +21,6 @@
     overflow: hidden;
     display: block;
     max-width: max-content;
-    /* border-right: 2px solid var(--clr-heading); */
-    /* animation: 
-        typing 3s infinite steps(var(--characters)) alternate,
-        cursorBlink .3s infinite; */
 }
 .section-subtitle > span::before {
     content: '';
@@ -43,29 +32,3 @@
     left: var(--subtitle-pos-left, 0);
     border-radius: 100vmax;
 }
-/* .section-subtitle::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding-block: .6em;
-    background-color: var(--bg-subtitle, var(--clr-background));
-    border-left: 2px solid #000;
-    animation: 
-        typing 3s infinite steps(var(--characters)) alternate,
-        cursorBlink .3s infinite;
-} */
-/* @keyframes typing {
-    70%, 100% {
-        width: 100%;
-    }
-}
-@keyframes cursorBlink {
-    to {
-        border-right: transparent;
-    }
-} */
-
-/* ===[ Utilities ]=== */
