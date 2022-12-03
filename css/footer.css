@@ -1,0 +1,15 @@
+.grid-footer-col {
+    display: grid;
+    gap: 1em;
+}
+@media (min-width:40em) {
+    .grid-footer-col {
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+}
+
+@media (min-width:50em) {
+    .grid-footer-col {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}

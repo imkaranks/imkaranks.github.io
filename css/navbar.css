@@ -1,0 +1,110 @@
+/* === Primary Navigation === */
+.primary-header {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+@media (max-width: 49.999em) {
+    .primary-nav {
+        --transform: translate(200%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        z-index: 5;
+        background-color: var(--clr-accent-700);
+        transform: var(--transform);
+        -moz-transform: var(--transform);
+        -ms-transform: var(--transform);
+        -o-transform: var(--transform);
+        -webkit-transform: var(--transform);
+        transition: var(--ts-ease);
+        -moz-transition: var(--ts-ease);
+        -o-transition: var(--ts-ease);
+        -webkit-transition: var(--ts-ease);
+    }
+
+    .nav-toggle>span {
+        width: 3em;
+        height: .2em;
+    }
+
+    .nav-toggle[aria-expanded="true"]>span {
+        --transition: opacity .3s ease, var(--ts-ease);
+        --rotate: ;
+        transform: var(--rotate);
+        -moz-transform: var(--rotate);
+        -ms-transform: var(--rotate);
+        -o-transform: var(--rotate);
+        -webkit-transform: var(--rotate);
+        transition: var(--transition);
+        -moz-transition: var(--transition);
+        -o-transition: var(--transition);
+        -webkit-transition: var(--transition);
+    }
+
+    .nav-toggle[aria-expanded="true"]>span:nth-of-type(1),
+    .nav-toggle[aria-expanded="true"]>span:nth-of-type(3) {
+        position: absolute;
+        bottom: calc(2.7em/2);
+    }
+
+    .nav-toggle[aria-expanded="true"]>span:nth-of-type(1) {
+        --rotate: rotate(-45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"]>span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle[aria-expanded="true"]>span:nth-of-type(3) {
+        --rotate: rotate(45deg);
+    }
+
+    .primary-nav[data-visible] {
+        --transform: translate(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.hover {
+    transition: color .3s ease;
+}
+
+.hover:hover {
+    color: var(--clr-hover);
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.theme-toggle,
+.nav-toggle {
+    z-index: 10;
+}
+
+.nav-toggle {
+    background-color: unset;
+    border: unset;
+    /* height: 2.7em; */
+    height: auto;
+}
+
+@media (min-width: 50em) {
+    button.nav-toggle {
+        display: none;
+    }
+}
