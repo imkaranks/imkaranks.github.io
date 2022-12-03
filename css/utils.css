@@ -327,9 +327,3 @@ section,
 .text-7xl {
     font-size: var(--fs-7xl);
 }
-
-/* @media (min-width:40em) {
-    .grid-col {
-        grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
-    }
-} */
