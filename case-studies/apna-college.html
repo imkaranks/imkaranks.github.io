@@ -24,36 +24,6 @@
         ::-webkit-scrollbar-track {
             background-color: rgb(154 199 181);
         }
-        .bg-primary-400 {
-            background-color: rgb(92 176 153);
-        }
-        .text-primary-400 {
-            color: rgb(92 176 153);
-        }
-        .bg-primary-500 {
-            background-color: rgb(0 136 145);
-        }
-        .text-primary-500 {
-            color: rgb(0 136 145);
-        }
-        .bg-neut-100 {
-            background-color: rgb(224 234 236);
-        }
-        .text-neut-100 {
-            color: rgb(224 234 236);
-        }
-        .bg-neut-400 {
-            background-color: rgb(154 199 181);
-        }
-        .text-neut-400 {
-            color: rgb(154 199 181);
-        }
-        .bg-neut-900 {
-            background-color: rgb(11 45 80);
-        }
-        .text-neut-900 {
-            color: rgb(11 45 80);
-        }
         .typed-out {
             position: relative;
             display: block;
@@ -69,18 +39,23 @@
             top: 0;
             bottom: 0;
             left: 100%;
-            border-left: 2px solid #333;
-            background-color: #fff;
+            border-left: 2px solid #818cf8;
+            background-color: #fafafa;
             animation:
             typing 1.5s steps(var(--chars)) infinite alternate,
             cursorBlink .8s infinite;
+        }
+        @media (prefers-color-scheme: dark) {
+            .typed-out::before {
+                background-color: #171717;
+            }
         }
         @keyframes typing {
             0%{
                 left: 0;
             }
             50%, 100%{
-                left: 100%;
+                left: calc(100% - 2px);
             }
         }
         @keyframes cursorBlink {
@@ -88,9 +63,10 @@
                 border-color: transparent;
             }
             100%{
-                border-color: #333;
+                border-color: #818cf8;
             }
         }
+        /* type */
         .type-item--top,
         .type-item {
             display: none;
@@ -101,30 +77,32 @@
     </style>
 </head>
 
-<body>
+<body class="bg-neutral-50 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
     <!-- Navigations -->
-    <div class="bg-neut-900 shadow-sm py-6 sticky top-0 z-20" id="topnav">
+    <div class="bg-indigo-900 text-neutral-50 shadow-sm py-6 sticky top-0 z-20" id="topnav">
         <div class="container w-11/12 max-w-[1100px] mx-auto flex justify-between items-center capitalize">
-            <div class="text-lg text-neut-100 uppercase font-bold">Apna College</div>
+            <a href="#" class="text-lg focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md uppercase font-bold">Apna College</a>
             <div class="nav-bar">
                 <!-- Menu toggle -->
-                <button class="relative text-3xl text-neut-100 z-20 sm:hidden" id="navToggle">
+                <button class="relative text-3xl focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md z-20 sm:hidden" id="navToggle">
                     <i class="fas fa-bars" id="menuIcon"></i>
                 </button>
                 <!-- Navlist -->
-                <ul class="nav-list text-md font-semibold fixed z-10 inset-0 bg-primary-400 flex flex-col items-center justify-center gap-4 sm:gap-6 tranform translate-y-[-100%] transition duration-3 ease-in sm:translate-y-0 sm:static sm:flex-row sm:bg-transparent md:gap-14" id="primary-nav">
+                <ul class="nav-list text-md font-semibold fixed z-10 inset-0 bg-indigo-800 flex flex-col items-center justify-center gap-4 sm:gap-6 tranform translate-y-[-100%] transition duration-3 ease-in sm:translate-y-0 sm:static sm:flex-row sm:bg-transparent md:gap-14" id="primary-nav">
                     <li class="">
-                        <button class="capitalize text-neut-100">join now</button>
+                        <a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md">join now</a>
                     </li>
                     <li class="">
-                        <a href="#" class="text-neut-100">home</a>
+                        <a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md">home</a>
                     </li>
                     <li class="">
-                        <a href="#" class="text-neut-100">courses</a>
+                        <a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md">courses</a>
                     </li>
-                    <li class="flex gap-4 flex-col sm:flex-row sm:gap-2">
-                        <button class="bg-primary-500 hover:bg-green-400 transition duration-3 ease capitalize text-white px-6 py-3 font-semibold text-lg rounded-xl">signup</button>
-                        <button class="bg-primary-500 hover:bg-green-400 transition duration-3 ease capitalize text-white px-6 py-3 font-semibold text-lg rounded-xl">login</button>
+                    <li class="">
+                        <a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md">sign in</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-md">sign up</a>
                     </li>
                 </ul>
             </div>
@@ -136,7 +114,7 @@
             <!-- Hero text -->
             <div class="col-span-1 text-center sm:text-left">
                 <!-- Hero headline -->
-                <h1 class="uppercase text-neut-900 text-3xl sm:text-4xl font-bold">want to learn</h1>
+                <h1 class="uppercase text-neutral-900 dark:text-neutral-50 text-3xl sm:text-4xl font-bold">want to learn</h1>
                 <!-- Hero subtitle -->
                 <p class="mt-0 mt-6 h-10 text-3xl sm:text-4xl font-semibold capitalize">
                     <span class="typed-out type-item--top mx-auto sm:mx-0">coding ?</span>
@@ -146,65 +124,73 @@
                     <span class="typed-out type-item--top mx-auto sm:mx-0">development ?</span>
                 </p>
                 <!-- Short intro -->
-                <p class="mt-6 text-2xl text-neut-400">We make programming simple & easy to understand.</p>
-                <button class="mt-8 bg-primary-500 hover:bg-green-400 transition duration-3 ease capitalize text-white px-6 py-3 font-semibold text-lg rounded-xl">sign up <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                <p class="mt-6 text-2xl max-w-[26ch] mx-auto sm:mx-0">We make programming simple & easy to understand.</p>
+                <button class="mt-8 bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus-visible:ring-4 ring-indigo-500 ring-offset-4 ring-offset-neutral-50 dark:ring-offset-neutral-900 rounded-sm transition duration-3 ease capitalize text-white px-6 py-3 font-semibold text-lg rounded-xl">sign up <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
             </div>
             <!-- Hero image -->
             <div class="col-span-1">
-                <img src="https://media.istockphoto.com/id/1158203819/vector/black-man-with-laptop-sitting-in-nature-and-leaves-concept-vector-illustration-for-working.jpg?s=612x612&w=0&k=20&c=s30nmbpMebkkrd_Xd02CSnGs8fvwNP_BsK0Uoxit8Wk=" class="max-w-full object-cover" alt="man with laptop on lap sitting in nature">
+                <img src="/assets/asset-1.png" class="mx-auto absolute opacity-25 left-1/2 translate-x-[-50%] sm:static sm:opacity-100 sm:translate-x-0 sm:animate-bounce" alt="laptop illustration">
             </div>
         </div>
     </div>
     <!-- Community -->
-    <div class="bg-primary-400 py-12">
+    <div class="bg-neutral-100 dark:bg-neutral-800 py-12">
         <div class="container text-center w-11/12 max-w-[1100px] mx-auto">
-            <h2 class="uppercase text-neut-900 leading-none text-2xl font-bold">india's most loved coding community</h2>
+            <h2 class="uppercase text-neutral-900 dark:text-neutral-50 leading-none text-2xl font-bold">india's most loved coding community</h2>
             <!-- Community stats -->
             <div class="mt-8 flex justify-center flex-wrap gap-x-24 gap-y-10">
-                <div class="uppercase text-neut-100 w-[max-content]">
-                    <h3 class="text-xl font-bold">2,700,00+</h3>
+                <div class="uppercase w-[max-content]">
+                    <h3 class="text-indigo-400 text-xl font-bold">2,700,00+</h3>
                     <p class="">happy learners</p>
                 </div>
-                <div class="uppercase text-neut-100 w-[max-content]">
-                    <h3 class="text-xl font-bold">3 crores+</h3>
+                <div class="uppercase w-[max-content]">
+                    <h3 class="text-indigo-400 text-xl font-bold">3 crores+</h3>
                     <p class="">monthly views</p>
                 </div>
-                <div class="uppercase text-neut-100 w-[max-content]">
-                    <h3 class="text-xl font-bold">200,00+</h3>
+                <div class="uppercase w-[max-content]">
+                    <h3 class="text-indigo-400 text-xl font-bold">200,00+</h3>
                     <p class="">new monthly subscribers</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Courses -->
-    <div class="bg-neut-100 py-12">
+    <div class="py-12">
         <div class="container w-11/12 max-w-[1100px] mx-auto">
             <!-- Courses wrapper -->
             <div class="courses flex justify-center gap-6 flex-wrap">
-                <div class="card bg-white text-center p-8 min-w-[268px] max-w-full rounded-md">
+                <div class="card shadow-md bg-neutral-100 dark:bg-neutral-800 text-center p-8 min-w-[268px] max-w-full rounded-md">
+                    <span class="mx-auto grid text-neutral-50 mt-[-3rem] items-center w-10 h-10 rounded-full bg-indigo-500">
+                        <i class="fas fa-code"></i>
+                    </span>
                     <div class="card-header uppercase">
-                        <h3 class="text-xl font-bold">alpha batch 2.0</h3>
-                        <p class="p-1 mx-auto w-[max-content] mt-3 bg-neut-400 rounded-md text-sm font-semibold">starting in 3 days</p>
+                        <h3 class="text-xl text-neutral-900 dark:text-neutral-50 font-bold">alpha batch 2.0</h3>
+                        <p class="bg-neutral-200 dark:bg-neutral-700 p-1 mx-auto w-[max-content] mt-3 rounded-md text-sm font-semibold">starting in 3 days</p>
                     </div>
                     <p class="capitalize my-5">for beginner & pro coders</p>
-                    <button class="mt-4 bg-primary-500 hover:bg-green-400 transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                    <button class="mt-4 bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus-visible:ring-4 ring-indigo-500 ring-offset-4 ring-offset-neutral-50 dark:ring-offset-neutral-900 rounded-sm transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                 </div>
-                <!-- temp -->
-                <div class="card bg-white text-center p-8 min-w-[268px] max-w-full rounded-md">
+                <div class="card shadow-md bg-neutral-100 dark:bg-neutral-800 text-center p-8 min-w-[268px] max-w-full rounded-md">
+                    <span class="mx-auto grid text-neutral-50 mt-[-3rem] items-center w-10 h-10 rounded-full bg-indigo-500">
+                        <i class="fas fa-code"></i>
+                    </span>
                     <div class="card-header uppercase">
-                        <h3 class="text-xl font-bold">alpha batch 2.0</h3>
-                        <p class="p-1 mx-auto w-[max-content] mt-3 bg-neut-400 rounded-md text-sm font-semibold">starting in 3 days</p>
+                        <h3 class="text-xl text-neutral-900 dark:text-neutral-50 font-bold">alpha batch 2.0</h3>
+                        <p class="bg-neutral-200 dark:bg-neutral-700 p-1 mx-auto w-[max-content] mt-3 rounded-md text-sm font-semibold">starting in 3 days</p>
                     </div>
                     <p class="capitalize my-5">for beginner & pro coders</p>
-                    <button class="mt-4 bg-primary-500 hover:bg-green-400 transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                    <button class="mt-4 bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus-visible:ring-4 ring-indigo-500 ring-offset-4 ring-offset-neutral-50 dark:ring-offset-neutral-900 rounded-sm transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                 </div>
-                <div class="card bg-white text-center p-8 min-w-[268px] max-w-full rounded-md">
+                <div class="card shadow-md bg-neutral-100 dark:bg-neutral-800 text-center p-8 min-w-[268px] max-w-full rounded-md">
+                    <span class="mx-auto grid text-neutral-50 mt-[-3rem] items-center w-10 h-10 rounded-full bg-indigo-500">
+                        <i class="fas fa-code"></i>
+                    </span>
                     <div class="card-header uppercase">
-                        <h3 class="text-xl font-bold">alpha batch 2.0</h3>
-                        <p class="p-1 mx-auto w-[max-content] mt-3 bg-neut-400 rounded-md text-sm font-semibold">starting in 3 days</p>
+                        <h3 class="text-xl text-neutral-900 dark:text-neutral-50 font-bold">alpha batch 2.0</h3>
+                        <p class="bg-neutral-200 dark:bg-neutral-700 p-1 mx-auto w-[max-content] mt-3 rounded-md text-sm font-semibold">starting in 3 days</p>
                     </div>
                     <p class="capitalize my-5">for beginner & pro coders</p>
-                    <button class="mt-4 bg-primary-500 hover:bg-green-400 transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                    <button class="mt-4 bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus-visible:ring-4 ring-indigo-500 ring-offset-4 ring-offset-neutral-50 dark:ring-offset-neutral-900 rounded-sm transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
@@ -212,7 +198,7 @@
     <!-- Moto banner -->
     <div class="py-12 relative overflow-hidden">
         <div class="container w-11/12 max-w-[1100px] mx-auto">
-            <h2 class="relative z-10 uppercase text-center text-neut-900 leading-none text-2xl font-semibold">we are on the mission, join us.</h2>
+            <h2 class="text-neutral-900 dark:text-neutral-50 relative z-10 uppercase text-center leading-none text-2xl font-semibold">we are on the mission, join us.</h2>
                 <img src="https://media.istockphoto.com/id/1333119486/photo/silhouette-of-group-business-team-making-high-hands-over-head-in-sunset-sky.jpg?b=1&s=170667a&w=0&k=20&c=vUHG02EDm3XcW4gcALAkg80eXZF7pf3CHcqjT9kgjDg=" alt="silhouette-of-group-business-team-making-high-hands-over-head-in-sunset-sky" class="absolute inset-0 object-cover">
         </div>
     </div>
@@ -222,42 +208,42 @@
             <!-- Testimonial grid -->
             <div class="testimonial-grid grid gap-6 sm:grid-cols-12">
                 <div class="testimonial-header sm:col-span-6">
-                    <p class="uppercase text-2xl font-semibold text-primary-500">our students love us</p>
+                    <p class="uppercase text-neutral-900 dark:text-neutral-50 text-2xl font-semibold text-primary-500">our students love us</p>
                 </div>
-                <div class="testimonial-item sm:col-span-6 p-4 bg-neut-100">
+                <div class="testimonial-item bg-neutral-100 dark:bg-neutral-800 sm:col-span-6 p-4">
                     <!-- Quotes icon -->
                     <!-- <img src="" alt="" class=""> -->
-                    <i class="fa fa-quote-left text-3xl block text-neut-400" aria-hidden="true"></i>
+                    <i class="fa fa-quote-left text-3xl text-neutral-300 dark:text-neutral-600 block" aria-hidden="true"></i>
                     <blockquote>
                         <p class="py-3">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, laborum? Doloribus nemo nulla
                             incidunt. Mollitia veniam nobis sapiente consequuntur nihil.
                         </p>
-                        <cite class="font-semibold">Lorem, ipsum.</cite>
+                        <cite class="font-semibold text-neutral-900 dark:text-neutral-50">Lorem, ipsum.</cite>
                     </blockquote>
                 </div>
                 <!-- temp -->
-                <div class="testimonial-item sm:col-span-6 p-4 bg-neut-100">
+                <div class="testimonial-item bg-neutral-100 dark:bg-neutral-800 sm:col-span-6 p-4">
                     <!-- quotes image -->
                     <!-- <img src="" alt="" class=""> -->
-                    <i class="fa fa-quote-left text-3xl block text-neut-400" aria-hidden="true"></i>
+                    <i class="fa fa-quote-left text-3xl text-neutral-300 dark:text-neutral-600 block" aria-hidden="true"></i>
                     <blockquote>
                         <p class="py-3">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, laborum? Doloribus nemo nulla
                             incidunt. Mollitia veniam nobis sapiente consequuntur nihil.
                         </p>
-                        <cite class="font-semibold">Lorem, ipsum.</cite>
+                        <cite class="font-semibold text-neutral-900 dark:text-neutral-50">Lorem, ipsum.</cite>
                     </blockquote>
                 </div>
-                <div class="testimonial-item sm:col-span-6 p-4 bg-neut-100">
+                <div class="testimonial-item bg-neutral-100 dark:bg-neutral-800 sm:col-span-6 p-4">
                     <!-- quotes image -->
-                    <i class="fa fa-quote-left text-3xl block text-neut-400" aria-hidden="true"></i>
+                    <i class="fa fa-quote-left text-3xl text-neutral-300 dark:text-neutral-600 block" aria-hidden="true"></i>
                     <blockquote>
                         <p class="py-3">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, laborum? Doloribus nemo nulla
                             incidunt. Mollitia veniam nobis sapiente consequuntur nihil.
                         </p>
-                        <cite class="font-semibold">Lorem, ipsum.</cite>
+                        <cite class="font-semibold text-neutral-900 dark:text-neutral-50">Lorem, ipsum.</cite>
                     </blockquote>
                 </div>
             </div>
@@ -267,8 +253,8 @@
     <div class="py-12">
         <div class="container w-11/12 max-w-[1100px] mx-auto">
             <div class="socials-header text-center">
-                <h2 class="uppercase text-neut-900 leading-none text-2xl font-bold">join us on</h2>
-                <p class="flex h-6 flex-col items-center">
+                <h2 class="uppercase text-neutral-900 dark:text-neutral-50 leading-none text-2xl font-bold">join us on</h2>
+                <p class="flex text-xl h-7 flex-col items-center">
                     <span class="typed-out type-item type-item-hidden">#youtube</span>
                     <span class="typed-out type-item type-item-hidden" style="animation-delay: .5s;">#instagram</span>
                     <span class="typed-out type-item type-item-hidden" style="animation-delay: 1s;animation-direction: alternate-reverse;">#telegram</span>
@@ -280,63 +266,63 @@
                     <div class="socials-icon mx-auto w-20">
                         <img src="https://pngimg.com/uploads/youtube/youtube_PNG12.png" alt="" class="object-cover max-w-full">
                     </div>
-                    <h3 class="font-semibold">youtube</h3>
+                    <h3 class="font-semibold text-neutral-900 dark:text-neutral-50">youtube</h3>
                     <p class="text-sm">apna college</p>
                 </div>
                 <div class="social-item capitalize">
                     <div class="socials-icon mx-auto w-20">
                         <img src="https://pngimg.com/uploads/instagram/instagram_PNG3.png" alt="" class="object-cover max-w-full">
                     </div>
-                    <h3 class="font-semibold">instagram</h3>
+                    <h3 class="font-semibold text-neutral-900 dark:text-neutral-50">instagram</h3>
                     <p class="text-sm">aman dhattarwal</p>
                 </div>
                 <div class="social-item capitalize">
                     <div class="socials-icon mx-auto w-20">
                         <img src="https://pngimg.com/uploads/telegram/telegram_PNG19.png" alt="" class="object-cover max-w-full">
                     </div>
-                    <h3 class="font-semibold">telegram</h3>
+                    <h3 class="font-semibold text-neutral-900 dark:text-neutral-50">telegram</h3>
                     <p class="text-sm">apna college</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer/Hotlinks/Copyright -->
-    <div class="bg-neut-900 text-neut-100 py-6">
+    <!-- Footer/Copyright -->
+    <div class="bg-indigo-900 text-indigo-100 py-6">
         <div class="container w-11/12 max-w-[1100px] mx-auto capitalize">
             <div class="grid gap-6 sm:grid-cols-12">
                 <!-- Edtech company name and desc -->
                 <div class="sm:col-span-6 md:col-span-3">
-                    <h3 class="text-xl font-semibold">apna college</h3>
+                    <h3 class="text-xl font-semibold text-neutral-50">apna college</h3>
                     <p class="mt-2">
                         we are india's most loved coding community. join us.
                     </p>
                 </div>
                 <div class="sm:col-span-6 md:col-span-3">
-                    <h3 class="uppercase text-lg font-semibold">helpful links</h3>
+                    <h3 class="uppercase text-lg font-semibold text-neutral-50">helpful links</h3>
                     <ul class="mt-2">
-                        <li><a href="#">courses</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">refund & cancellation policy</a></li>
-                        <li><a href="#">term & conditions</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">courses</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">privacy policy</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">refund & cancellation policy</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">term & conditions</a></li>
                     </ul>
                 </div>
                 <div class="sm:col-span-6 md:col-span-3">
-                    <h3 class="uppercase text-lg font-semibold">connect with us</h3>
+                    <h3 class="uppercase text-lg font-semibold text-neutral-50">connect with us</h3>
                     <ul class="mt-2">
-                        <li><a href="#">facebook</a></li>
-                        <li><a href="#">twitter</a></li>
-                        <li><a href="#">youtube</a></li>
-                        <li><a href="#">instagram</a></li>
-                        <li><a href="#">linkedin</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">facebook</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">twitter</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">youtube</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">instagram</a></li>
+                        <li><a href="#" class="focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">linkedin</a></li>
                     </ul>
                 </div>
                 <div class="sm:col-span-6 md:col-span-3">
-                    <h3 class="uppercase text-lg font-semibold">get in touch</h3>
+                    <h3 class="uppercase text-lg font-semibold text-neutral-50">get in touch</h3>
                     <p class="mt-2">hello@apnacollege.in</p>
                 </div>
             </div>
             <div class="text-center py-4">
-                <small class="">all rights reserve &copy; 2022 to <a href="https://www.apnacollege.in/home" class="text-neut-100 underline">apna college</a>.<br>this is a part of my project and tribute to <a href="https://www.apnacollege.in/home" class="text-neut-100 underline">apna college</a>. please show them some love❤️ and do visit <a href="https://www.apnacollege.in/home" class="text-neut-100 underline">apna college</a></small>
+                <small class="">all rights reserve &copy; 2022 to <a href="https://www.apnacollege.in/home" class="underline focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">apna college</a>.<br>this is a part of my project and tribute to <a href="https://www.apnacollege.in/home" class="underline focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">apna college</a>. please show them some love❤️ and do visit <a href="https://www.apnacollege.in/home" class="underline focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">apna college</a></small>
             </div>
         </div>
     </div>
