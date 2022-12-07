@@ -18,11 +18,11 @@
             width: 8px;
         }
         ::-webkit-scrollbar-thumb {
-            background-color: rgb(0 136 145);
+            background-color: #312e81;
             border-radius: 100vmax;
         }
         ::-webkit-scrollbar-track {
-            background-color: rgb(154 199 181);
+            background-color: #818cf8;
         }
         .typed-out {
             position: relative;
@@ -66,7 +66,6 @@
                 border-color: #818cf8;
             }
         }
-        /* type */
         .type-item--top,
         .type-item {
             display: none;
@@ -170,6 +169,7 @@
                     <p class="capitalize my-5">for beginner & pro coders</p>
                     <button class="mt-4 bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus-visible:ring-4 ring-indigo-500 ring-offset-4 ring-offset-neutral-50 dark:ring-offset-neutral-900 rounded-sm transition duration-3 ease capitalize text-white px-5 py-2 font-semibold text-lg rounded-xl">explore <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                 </div>
+                <!-- temp -->
                 <div class="card shadow-md bg-neutral-100 dark:bg-neutral-800 text-center p-8 min-w-[268px] max-w-full rounded-md">
                     <span class="mx-auto grid text-neutral-50 mt-[-3rem] items-center w-10 h-10 rounded-full bg-indigo-500">
                         <i class="fas fa-code"></i>
@@ -212,7 +212,6 @@
                 </div>
                 <div class="testimonial-item bg-neutral-100 dark:bg-neutral-800 sm:col-span-6 p-4">
                     <!-- Quotes icon -->
-                    <!-- <img src="" alt="" class=""> -->
                     <i class="fa fa-quote-left text-3xl text-neutral-300 dark:text-neutral-600 block" aria-hidden="true"></i>
                     <blockquote>
                         <p class="py-3">
@@ -225,7 +224,6 @@
                 <!-- temp -->
                 <div class="testimonial-item bg-neutral-100 dark:bg-neutral-800 sm:col-span-6 p-4">
                     <!-- quotes image -->
-                    <!-- <img src="" alt="" class=""> -->
                     <i class="fa fa-quote-left text-3xl text-neutral-300 dark:text-neutral-600 block" aria-hidden="true"></i>
                     <blockquote>
                         <p class="py-3">
@@ -264,21 +262,21 @@
             <div class="mt-8 grid grid-cols-3 text-center">
                 <div class="social-item capitalize">
                     <div class="socials-icon mx-auto w-20">
-                        <img src="https://pngimg.com/uploads/youtube/youtube_PNG12.png" alt="" class="object-cover max-w-full">
+                        <img src="assets/youtube.png" alt="" class="object-cover max-w-full">
                     </div>
                     <h3 class="font-semibold text-neutral-900 dark:text-neutral-50">youtube</h3>
                     <p class="text-sm">apna college</p>
                 </div>
                 <div class="social-item capitalize">
                     <div class="socials-icon mx-auto w-20">
-                        <img src="https://pngimg.com/uploads/instagram/instagram_PNG3.png" alt="" class="object-cover max-w-full">
+                        <img src="assets/instagram.png" alt="" class="object-cover max-w-full">
                     </div>
                     <h3 class="font-semibold text-neutral-900 dark:text-neutral-50">instagram</h3>
                     <p class="text-sm">aman dhattarwal</p>
                 </div>
                 <div class="social-item capitalize">
                     <div class="socials-icon mx-auto w-20">
-                        <img src="https://pngimg.com/uploads/telegram/telegram_PNG19.png" alt="" class="object-cover max-w-full">
+                        <img src="assets/telegram.png" alt="" class="object-cover max-w-full">
                     </div>
                     <h3 class="font-semibold text-neutral-900 dark:text-neutral-50">telegram</h3>
                     <p class="text-sm">apna college</p>
@@ -286,7 +284,7 @@
             </div>
         </div>
     </div>
-    <!-- Footer/Copyright -->
+    <!-- Footer/Hotlinks/Copyright -->
     <div class="bg-indigo-900 text-indigo-100 py-6">
         <div class="container w-11/12 max-w-[1100px] mx-auto capitalize">
             <div class="grid gap-6 sm:grid-cols-12">
@@ -321,7 +319,7 @@
                     <p class="mt-2">hello@apnacollege.in</p>
                 </div>
             </div>
-            <div class="text-center py-4">
+            <div class="sm:text-center py-4">
                 <small class="">all rights reserve &copy; 2022 to <a href="https://www.apnacollege.in/home" class="underline focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">apna college</a>.<br>this is a part of my project and tribute to <a href="https://www.apnacollege.in/home" class="underline focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">apna college</a>. please show them some love❤️ and do visit <a href="https://www.apnacollege.in/home" class="underline focus:outline-none focus-visible:ring-4 ring-neutral-100 ring-offset-4 ring-offset-indigo-900 rounded-sm">apna college</a></small>
             </div>
         </div>
@@ -361,7 +359,7 @@
                 item.classList.remove("type-item-visible")
             })
         }
-
+        
         const switchText = (items) => {
             let init = 0;
             setInterval(()=>{
@@ -376,7 +374,6 @@
         switchText(topTypeItems);
         switchText(typeItems);
         
-        /* get string length */
         const getLength = (item)=>{
             return item.innerText.length;
         }
@@ -388,7 +385,6 @@
         }
         setLength(topTypeItems);
         setLength(typeItems);
-        /* get string length */
     </script>
 </body>
 
