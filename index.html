@@ -14,8 +14,8 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- /.font awesome -->
+        crossorigin="anonymous" referrerpolicy="no-referrer" /><!-- /.font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,6 +74,7 @@
                 <!-- theme toggle -->
                 <button style="padding: .75em;--focus-bg:var(--clr-accent-700);--focus-otl:var(--clr-surface);"
                     class="relative btn bg-surface theme-toggle" id="theme-toggle">
+                    <!-- <i class="fa-solid fa-lightbulb text-md text-regular" id="theme-icon"></i> -->
                     <i class="fa fa-sun-o text-md text-regular" id="theme-icon"></i>
                 </button><!-- /.theme toggle -->
 
@@ -97,7 +98,7 @@
             </div>
             <div class="hero__cta flex flex-col flex-wrap">
                 <button style="--focus-bg:var(--clr-surface);--focus-otl:var(--clr-accent-700);"
-                    class="btn btn--primary bg-accent-700 text-neutral-100 capitalize">see my works</button>
+                    class="btn btn--primary bg-accent-700 text-neutral-100 capitalize">mini projects</button>
                 <button style="--focus-bg:var(--clr-surface);--focus-otl:var(--clr-background);"
                     class="btn btn--secondary bg-background text-regular capitalize justify-center">about me</button>
             </div>
@@ -169,6 +170,7 @@
                         pleasing and intuitive designs.
                     </p>
                     <div class="section__call-to-action about__cta">
+                        <!-- <button id="btn" class="btn btn--primary bg-primary-400 text-neutral-100 capitalize">know more</button> -->
                         <a style="--focus-bg:var(--clr-surface);--focus-otl:var(--clr-accent-700);" href="#"
                             class="decoration-none btn btn--primary bg-accent-700 text-neutral-100 capitalize">know
                             more</a>
@@ -182,45 +184,7 @@
         </div>
     </section><!-- /.about -->
 
-    <!-- skills set -->
-    <section class="skill" id="skill" aria-labelledby="skill__title">
-        <div class="container text-center flow">
-            <header class="section-header leading-none">
-                <h2 class="section-title font-heading text-heading text-4xl uppercase" id="skill__title">skill set</h2>
-                <p class="section-subtitle relative text-center text-2xl mx-auto" style="--subtitle-pos-left:.5em;">
-                    <span class="relative">technologies i use?</span>
-                </p>
-            </header>
-            <div class="skill__wrapper flow">
-                <!-- skill item 1 -->
-                <div class="skill__item">
-                    <h3 class="uppercase">html</h3>
-                    <div class="progress-bar mx-auto progress-bar--html relative bg-surface"></div>
-                </div><!-- /.skill item 1 -->
-
-                <!-- skill item 2 -->
-                <div class="skill__item">
-                    <h3 class="uppercase">css</h3>
-                    <div class="progress-bar mx-auto relative bg-surface" style="--percent: 70%;"></div>
-                </div><!-- /.skill item 2 -->
-
-                <!-- skill item 3 -->
-                <div class="skill__item">
-                    <h3 class="uppercase">js</h3>
-                    <div class="progress-bar mx-auto relative bg-surface" style="--percent: 50%;"></div>
-                </div><!-- /.skill item 3 -->
-
-                <!-- skill item 4 -->
-                <div class="skill__item">
-                    <h3 class="">tailwindcss</h3>
-                    <div class="progress-bar mx-auto relative bg-surface" style="--percent: 60%;"></div>
-                </div><!-- /.skill item 4 -->
-            </div>
-        </div>
-    </section><!-- /.skills set -->
-
-    <!-- services -->
-    <section class="service isolate bg-surface" id="service" aria-labelledby="service__title">
+    <section>
         <div class="container flow">
             <header class="section-header leading-none">
                 <h2 class="section-title font-heading text-heading text-4xl text-primary-400 uppercase"
@@ -231,25 +195,33 @@
                     <span class="relative">client's satisfaction</span>
                 </p>
             </header>
-            <div class="service__wrapper grid grid-col" data-even-rows="true" id="service__wrapper">
-                <!-- card 1 -->
-                <!-- <div class="service__card flex" aria-labelledby="service__card-title">
-                    <div class="service__card-icon">
-                        <i class="fa fa-tablet" aria-hidden="true"></i>
-                        <i class="fa fa-code" aria-hidden="true"></i>
-                        <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="grid-two-cols" id="expertise__wrapper">
+                <div class="skill__wrapper flow" style="--flow-space:.5em">
+                    <div class="skill__item">
+                        <h3 class="text-md uppercase">html</h3>
+                        <div class="progress-bar mx-auto progress-bar--html relative bg-surface"></div>
                     </div>
-                    <div class="service__card-body flow" style="--flow-space: .5em;">
-                        <h3 class="service__card-title uppercase">responsive</h3>
-                        <p class="service__card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae illo sed consequuntur
-                            minus consectetur unde odit, beatae exercitationem dolores velit?
-                        </p>
+    
+                    <div class="skill__item">
+                        <h3 class="text-md uppercase">css</h3>
+                        <div class="progress-bar mx-auto relative bg-surface" style="--percent: 70%;"></div>
                     </div>
-                </div> -->
+                    
+                    <div class="skill__item">
+                        <h3 class="text-md uppercase">js</h3>
+                        <div class="progress-bar mx-auto relative bg-surface" style="--percent: 50%;"></div>
+                    </div>
+    
+                    <div class="skill__item">
+                        <h3 class="text-md">tailwindcss</h3>
+                        <div class="progress-bar mx-auto relative bg-surface" style="--percent: 60%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section><!-- /.services -->
+    </section>
+
+    <hr>
 
     <!-- testimonials -->
     <section class="testimonial" id="testimonial" aria-labelledby="testimonial__title">
