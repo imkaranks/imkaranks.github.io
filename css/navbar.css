@@ -99,8 +99,7 @@
 .nav-toggle {
     background-color: unset;
     border: unset;
-    /* height: 2.7em; */
-    height: auto;
+    height: 2.7em;
 }
 
 @media (min-width: 50em) {
