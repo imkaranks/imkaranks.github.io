@@ -1,8 +1,8 @@
 const primaryNav = document.getElementById("primary-nav");
 const navToggle = document.getElementById("nav-toggle");
-const serviceWrapper = document.getElementById("service__wrapper");
+const expertiseWrapper = document.getElementById("expertise__wrapper");
 const themeToggle = document.getElementById("theme-toggle");
-/* added event listeners */
+
 navToggle.addEventListener('click', () => {
     primaryNav.hasAttribute("data-visible") ?
         navToggle.setAttribute("aria-expanded", false) :
@@ -32,9 +32,8 @@ import { services as services } from "./data.js";
 import { projects as projects } from "./data.js";
 
 services.forEach((item) => {
-    /* construct card content */
     const content = `
-    <div class="service__card shadow-hard relative overflow-hidden p-4 bg-background rounded-sm flex" aria-labelledby="service__card-title">
+    <div class="service__card shadow-hard relative overflow-hidden p-4 bg-surface rounded-sm flex" aria-labelledby="service__card-title">
         <div class="service__card-icon relative text-2xl">
             <i class="fa ${item.icon}" aria-hidden="true"></i>
         </div>
@@ -44,7 +43,7 @@ services.forEach((item) => {
                 ${item.content}
             </p>
         </div>`;
-    serviceWrapper.innerHTML += content;
+    expertiseWrapper.innerHTML += content;
 });
 
 const projectWrapper = document.querySelector("#project-wrapper")
