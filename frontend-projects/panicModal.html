@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/utils.css">
+    <link rel="stylesheet" href="../css/boilerplate.css">
+    <title>Frontend Mini Projects - Panic Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .form-input {
+            display: block;
+            padding: .5em;
+        }
+
+        .modal {
+            transition: transform .3s ease;
+        }
+
+        .hidden {
+            transform: scale(0);
+        }
+
+        .visible {
+            transform: scale(1);
+        }
+
+        .behind {
+            z-index: -1;
+        }
+
+        .form-group {
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 500px;
+        }
+
+        .form-icon {
+            --size: 4em;
+            top: calc(var(--size)/2 * -1);
+            left: 50%;
+            transform: translateX(-50%);
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+        }
+
+        .form-input {
+            border: unset;
+            border-bottom: 2px solid var(--clr-accent-500);
+            background-color: unset;
+        }
+
+        .form-input:active,
+        .form-input:focus {
+            outline: 2px solid var(--clr-accent-500);
+            outline-offset: 2px;
+            border: unset;
+            border-bottom: 2px solid var(--clr-accent-500);
+            background-color: unset;
+        }
+
+        .submit-btn {
+            max-width: 8em;
+            padding: .5em 2em;
+        }
+
+        .modal {
+            padding: 2em 1em;
+            background-color: #fff;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0 0 20px rgb(0 0 0 / 0.75);
+        }
+
+        .close-modal {
+            --size: 3em;
+            top: 0;
+            right: 0;
+            width: var(--size);
+            height: var(--size);
+            background-color: red;
+        }
+
+        .home-link {
+            --size: 4em;
+            width: var(--size);
+            height: calc(var(--size)/2);
+            bottom: 3vh;
+        }
+    </style>
+</head>
+
+<body class="light bg-background">
+    <div class="container grid-col isolate">
+        <!-- <div class="image">
+            <img src="https://media.istockphoto.com/id/1216791768/photo/hand-flipping-wooden-cubes-for-change-wording-panic-to-calm-mindset-is-important-for-human.jpg?b=1&s=170667a&w=0&k=20&c=0AiChGf_AfT6IB9OqUsVpQmt4QdpwMXWV1Q7W67bI0I=" class="absolute inset-0 object-cover w-full h-full behind" alt="">
+        </div> -->
+        <div class="form-group relative text-center w-full shadow-hard bg-surface rounded-sm p-4">
+            <span
+                class="form-icon flex items-center justify-center font-semibold text-neutral-100 text-md absolute bg-accent-700">
+                😱
+            </span>
+            <div class="flow">
+                <label for="panic-text"
+                    class="form-label text-4xl text-heading capitalize leading-none font-semibold">enter the
+                    text</label>
+                <input type="text" class="form-input text-regular text-md w-full" name="panic-text" id="panic-text">
+                <button class="submit-btn text-lg bg-accent-700 text-neutral-100 border-none">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal bg-surface absolute hidden">
+        <div class="modal-body flow" style="--flow-space: 1em;">
+            <h1 class="modal-heading text-2xl text-heading"></h1>
+            <p class="text-md modal-text text-regular"></p>
+        </div>
+        <button class="close-modal absolute">close</button>
+    </div>
+    <div class="home-link rounded-sm absolute bg-accent-500 flex justify-center items-center">
+        <a href="/index.html" class=" text-xs text-neutral-100 font-semibold">Go back</a>
+    </div>
+    <script>
+        const formInput = document.querySelector(".form-input");
+        const submitBtn = document.querySelector(".submit-btn");
+        const closeModalBtn = document.querySelector(".close-modal");
+        const modal = document.querySelector(".modal");
+        const modalText = document.querySelector(".modal-text");
+        const modalHeading = document.querySelector(".modal-heading");
+
+        const showModal = () => {
+            modal.classList.replace("hidden", "visible");
+        }
+
+        const hideModal = () => {
+            modal.classList.replace("visible", "hidden");
+        }
+
+        const setModalText = (heading, text) => {
+            modalHeading.innerText = heading;
+            modalText.innerText = text;
+        }
+
+        const modalToggle = () => {
+            if (modal.classList.contains("hidden")) {
+                showModal();
+            }
+            else {
+                hideModal()
+            }
+        }
+
+        /* Panic Function */
+        const panicText = string => string.toUpperCase().split(" ").join(" 😱 ") + "!";
+        // test: Hello i am under the water please help me. Here too much raining
+
+        submitBtn.addEventListener('click', () => {
+            const formValue = formInput.value;
+            if (formValue.toLowerCase() === formValue && formValue) {
+                // const formattedText = formValue.toUpperCase().split(" ").join(" 😱 ") + "!";
+                const formattedText = panicText(formValue);
+                setModalText("Panic modal says:", formattedText);
+            }
+            else {
+                setModalText("Warning", "Please enter some text in lowercase to see panic modal response.");
+            }
+            showModal()
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            hideModal();
+        });
+    </script>
+</body>
+
+</html>
