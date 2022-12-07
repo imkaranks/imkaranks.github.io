@@ -9,13 +9,19 @@
 }
 
 .hero__image {
+    --egde: 5em;
     top: -1.5em;
     right: 0;
     width: 50%;
     height: 100%;
     z-index: -1;
-    opacity: .2;
-    clip-path: polygon(3em 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: .75;
+    clip-path: polygon(var(--egde) 0%, 100% 0%, 100% 100%, var(--egde) 100%, 0% 50%);
+}
+@media (max-width: 49.999em) {
+    .hero__image {
+        opacity: .2;
+    }
 }
 
 /* === Mouse Scroll === */
@@ -366,6 +372,10 @@
 .service__card:hover .service__card-text,
 .service__card:hover .service__card-icon {
     color: #fff;
+}
+
+hr {
+    opacity: .1;
 }
 /* === Testimonial === */
 .testimonial__card::before,
