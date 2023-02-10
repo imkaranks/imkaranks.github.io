@@ -51,7 +51,7 @@ class App {
                 const { data } = await this.getData(this.$character_input.value);
                 for (let item of data) {
                     this.$matched_characters.innerHTML += `
-                        <div class="card border-0 shadow-sm rounded overflow-hidden col-12 col-sm-4 col-md-3" style='padding:0'>
+                        <div class="card shadow-sm rounded overflow-hidden col-12 col-sm-6 col-md-4 col-lg-3" style='padding:0'>
                             <img src=${item.imageUrl} class="card-img-top" style="object-fit:cover; height: 20rem;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title text-center">${item.name}</h5>
