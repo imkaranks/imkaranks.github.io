@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Bellefair&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/boilerplate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/utils.css">
+
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body class="bg bg--destination">
+  <header class="header header--primary flex items-center">
+    <div class="logo">
+      <img src="./assets/shared/logo.svg" alt="space tourism logo">
+    </div>
+
+    <button class="btn btn--menu" aria-controls="primary-navigation">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="nav nav--primary" data-expanded="false" id="primary-navigation">
+      <ul class="nav__list nav__list--primary letter-space-400 font-barlow-cond flex uppercase" role="list">
+        <li>
+          <a href="./index.html" data-selected="false" class="nav__link text-light">
+            <span class="nav__link--number text-white" aria-hidden="true">00</span> Home
+          </a>
+        </li>
+        <li>
+          <a href="./destination.html" data-selected="true" class="nav__link text-light">
+            <span class="nav__link--number text-white" aria-hidden="true">01</span> Destination
+          </a>
+        </li>
+        <li>
+          <a href="./crew.html" data-selected="false" class="nav__link text-light">
+            <span class="nav__link--number text-white" aria-hidden="true">02</span> Crew
+          </a>
+        </li>
+        <li>
+          <a href="" data-selected="false" class="nav__link text-light">
+            <span class="nav__link--number text-white" aria-hidden="true">03</span> Technology
+          </a>
+        </li>
+        <li>
+          <a href="../../index.html" data-selected="false" class="nav__link text-light">
+            <span class="nav__link--number text-white" aria-hidden="true">04</span> Portfolio
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main destination">
+    <div class="wrapper grid grid-two-cols grid--destination">
+      <h1 class="numbered-title span-entire uppercase text-500 font-barlow-cond letter-space-600 text-white">
+        <span class="numbered-text bold" aria-hidden="true">01</span> Pick your destination
+      </h1>
+
+      <div>
+        <img src="./assets/destination/image-moon.webp" class="destination__image" alt="The Moon">
+      </div>
+
+      <div class="flow" style="--flow-space:3rem">
+        <div class="tab-list tab-list--destination flex">
+          <button class="btn btn--tab text-light font-barlow-cond letter-space-500" aria-selected="true" value="Moon">Moon</button>
+          <button class="btn btn--tab text-light font-barlow-cond letter-space-500" aria-selected="false" value="Mars">Mars</button>
+          <button class="btn btn--tab text-light font-barlow-cond letter-space-500" aria-selected="false" value="Europa">Europa</button>
+          <button class="btn btn--tab text-light font-barlow-cond letter-space-500" aria-selected="false" value="Titan">Titan</button>
+        </div>
+        
+        <article class="destination__info">
+          <h3 class="destination__title text-800 font-bellefair text-white uppercase">Moon</h3>
+          <p>
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and
+            come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing
+            sites.
+          </p>
+          <div class="destination__stats grid uppercase">
+            <div class="destination__stat">
+              <h4 class="text-300 font-barlow-cond letter-space-400">Avg. distance</h4>
+              <p class="text-500 text-white">384,400 km</p>
+            </div>
+            <div class="destination__stat">
+              <h4 class="text-300 font-barlow-cond letter-space-400">Est. travel time</h4>
+              <p class="text-500 text-white">3 days</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
