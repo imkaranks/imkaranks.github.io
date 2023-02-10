@@ -8,10 +8,6 @@ class App {
         this.tab_btns = document.querySelectorAll('.btn--tab');
         this.dot_btns = document.querySelectorAll('.btn--dot');
 
-        // this.tab_list = document.querySelector('[role="tablist"]');
-        // this.tabs = document.querySelectorAll('[role="tab"]');
-        // this.tabFocus = 0;
-
         this.addEventListeners();
     }
 
