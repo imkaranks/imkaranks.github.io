@@ -1,80 +1,71 @@
 class App {
-    constructor() {
-        this.$character_input = document.querySelector("#character-name");
-        this.$submitBtn = document.querySelector(".btn[type='submit']");
-        this.$forms = document.querySelectorAll("form");
-        this.$search_form = document.querySelector(".form--search");
-        this.$matched_characters = document.querySelector(".matched-characters");
-        this.$slide_btns = document.querySelectorAll('.btn--slide');
-        this.$featured_characters = document.querySelector('.container--featured');
+  constructor() {
+    this.$scroll_deck = document.querySelector('.section--featured>.container');
+    this.$scroll_btns = document.querySelectorAll('.btn--scroll');
+    this.position = 0;
+    this.$search_btn = document.querySelector('.btn--search');
+    this.$search_input = document.querySelector('input');
+    this.$char_article = document.querySelector('article');
 
-        this.url = 'https://api.disneyapi.dev/character';
+    this.api_url = this.url = 'https://api.disneyapi.dev/character';
 
-        this.addEventListeners();
-    }
+    this.addEventListeners();
+  }
 
-    addEventListeners() {
-        this.$forms.forEach(form => {
-            form.addEventListener('submit', event => {
-                event.preventDefault();
-            });
-        });
-
-        (async() => {
-            const { data } = await this.getData('prince');
-            for (let i = 0; i < 12; i++) {
-                this.$featured_characters.innerHTML += `
-                    <div class="card border-0 shadow m-2 bg-white rounded overflow-hidden flex-shrink-0" style='padding:0'>
-                        <img src=${data[i].imageUrl} class="card-img-top" style="object-fit:cover; height: 20rem;" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">${data[i].name}</h5>
-                        </div>
-                    </div>
-                `;
-            }
-        }) ();
-
-        this.$slide_btns.forEach(btn => {
-            btn.addEventListener('click', e => {
-                if (e.target.value === 'right') {
-                    this.$featured_characters.scrollLeft += 256;
-                }
-                else if (e.target.value === 'left') {
-                    this.$featured_characters.scrollLeft -= 256;
-                }
-            });
-        });
-
-        this.$submitBtn.addEventListener('click', async () => {
-            this.$matched_characters.innerHTML = '';
-            try {
-                const { data } = await this.getData(this.$character_input.value);
-                for (let item of data) {
-                    this.$matched_characters.innerHTML += `
-                        <div class="card shadow-sm rounded overflow-hidden col-12 col-sm-6 col-md-4 col-lg-3" style='padding:0'>
-                            <img src=${item.imageUrl} class="card-img-top" style="object-fit:cover; height: 20rem;" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">${item.name}</h5>
-                            </div>
-                        </div>
-                    `;
-                }
-            }
-            catch (error) {
-                console.log(error);
-            }
-            
-        })
-    }
-
-    async getData(query) {
-        const response = await fetch('https://api.disneyapi.dev/character?name='+query);
-        if (!response.ok) {
-            throw new Error(response.status);
+  addEventListeners() {
+    this.$scroll_btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('scroll-left')) {
+          this.$scroll_deck.scrollLeft -= 256;
+        } else {
+          this.$scroll_deck.scrollLeft += 256;
         }
-        const data = await response.json();
-        return data;
+      });
+    });
+
+    (async () => {
+      const { data } = await this.fetchCharacter('prince')
+      for (let i = 0; i < 12; i++) {
+        this.$scroll_deck.innerHTML += `
+          <div class="card card--slide">
+            <img src=${data[i].imageUrl} alt="${data[i].name}">
+            <p class="card-title">${data[i].name}</p>
+          </div>
+        `;
+      }
+    })();
+
+    this.$search_btn.addEventListener('click', async () => {
+      if (this.$search_input.value.trim === '') {
+        return;
+      }
+      document.querySelector('.characters-wrapper').innerHTML = '';
+      const { data } = await this.fetchCharacter(this.$search_input.value)
+      data.forEach(item => {
+        document.querySelector('.characters-wrapper').innerHTML += `
+          <div class="card card--grid" onclick="hyperlink('?id=${item._id}')">
+            <img src=${item.imageUrl} alt="${item.name}">
+            <p class="card-title">
+              ${item.name}
+            </p>
+          </div>`
+      });
+    })
+
+  }
+
+  async fetchCharacter(query) {
+    const response = await fetch(`${this.api_url}?name=${query}`);
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(response.status);
     }
+    return data;
+  }
+}
+
+function hyperlink(params) {
+  location.href = `info.html${params}`;
 }
 
 new App();
