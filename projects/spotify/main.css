@@ -331,7 +331,7 @@ h3 {
 }
 
 .song-card {
-  flex-basis: 240px;
+  flex-basis: 200px;
   flex-shrink: 0;
   background: linear-gradient(rgb(15 15 15), rgb(30 30 30));
   padding: 1rem;
@@ -358,7 +358,7 @@ h3 {
 }
 
 .song-card p {
-  font-size: .8125rem;
+  font-size: .875rem;
 }
 
 .song-play-icon {
@@ -447,7 +447,7 @@ button:focus-visible {
   }
 
   .primary-nav .container {
-    gap: 2rem;
+    gap: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     position: fixed;
