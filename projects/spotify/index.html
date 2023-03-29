@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/spotify.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="main.css">
   <title>Spotify Clone</title>
 </head>
@@ -29,10 +31,9 @@
         <img src="assets/spotify.png" alt="">
       </div>
 
-      <!-- <span class="visually-hidden">main menu</span> -->
       <ul class="global-list primary-nav-list">
         <li>
-          <a href="#" class="global-link primary-nav-link" data-selected="true">
+          <a href="index.html" class="global-link primary-nav-link" data-selected="true">
             <span class="primary-nav-icon">
               <svg role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 gQUQL home-active-icon"
                 viewBox="0 0 24 24" data-encore-id="icon">
@@ -45,7 +46,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="global-link primary-nav-link search" data-selected="false">
+          <a href="search.html" class="global-link primary-nav-link search" data-selected="false">
             <span class="primary-nav-icon">
               <svg role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 gQUQL search-icon"
                 viewBox="0 0 24 24" data-encore-id="icon">
@@ -58,7 +59,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="global-link primary-nav-link" data-selected="false">
+          <a href="#" class="global-link primary-nav-link" data-selected="false" data-require-login="true">
             <span class="primary-nav-icon">
               <svg role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 gQUQL collection-icon"
                 viewBox="0 0 24 24" data-encore-id="icon">
@@ -74,7 +75,7 @@
 
       <ul class="global-list primary-nav-list">
         <li>
-          <a href="#" class="global-link primary-nav-link" data-selected="false">
+          <a href="#" class="global-link primary-nav-link" data-selected="false" data-require-login="true">
             <span class="primary-nav-icon bg-offwhite">
               <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon"
                 class="Svg-sc-ytk21e-0 gQUQL">
@@ -87,7 +88,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="global-link primary-nav-link" data-selected="false">
+          <a href="#" class="global-link primary-nav-link" data-selected="false" data-require-login="true">
             <span class="primary-nav-icon bg-gradient">
               <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon"
                 class="Svg-sc-ytk21e-0 gQUQL">
@@ -101,7 +102,7 @@
         </li>
       </ul>
 
-      <button class="btn btn-primary btn-open-in-app">Open in app</button>
+      <button class="btn btn-primary btn-open-in-app">Open app</button>
 
       <a href="#" class="global-link cookies-text">Cookies</a>
 
@@ -119,7 +120,6 @@
     </div>
   </div>
 
-  <!-- menu button -->
   <button class="btn-menu" aria-expanded="false">
     <span class="visually-hidden">menu button</span>
     <i class="fas fa-bars" aria-hidden="false"></i>
@@ -138,7 +138,6 @@
         </button>
       </div>
 
-      <!-- <span class="visually-hidden">help center</span> -->
       <ul class="global-list secondary-nav-list">
         <li><a href="#" class="global-link secondary-nav-link">Premium</a></li>
         <li><a href="#" class="global-link secondary-nav-link">Support</a></li>
@@ -154,19 +153,14 @@
 
   <div class="main-content">
     <h1 class="visually-hidden">spotify songs and playlists</h1>
-    <!-- 1 -->
+    <!-- playlist section 1 -->
     <div class="section">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Focus</h2>
-          <p>Show all</p>
+          <a class="global-link" href="playlist.html?id=1">Show all</a>
         </div>
-        <div class="song-container" id="focus">
-          <!-- <div class="song-card">
-            <img src="./assets/thumbnail (1).jpg" alt="song-thumbnail">
-            <h3>Song Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div> -->
+        <div class="grid-playlist" id="focus">
         </div>
         <button class="btn-rounded btn-prev" aria-controls="focus" data-controls="focus">
           <span class="visually-hidden">previous playlist</span>
@@ -179,19 +173,14 @@
       </div>
     </div>
 
-    <!-- 2 -->
+    <!-- playlist section 2 -->
     <div class="section">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Spotify Playlist</h2>
-          <p>Show all</p>
+          <a class="global-link" href="playlist.html?id=2">Show all</a>
         </div>
-        <div class="song-container" id="spotify-playlist">
-          <!-- <div class="song-card">
-            <img src="./assets/thumbnail (1).jpg" alt="song-thumbnail">
-            <h3>Song Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div> -->
+        <div class="grid-playlist" id="spotify-playlist">
         </div>
         <button class="btn-rounded btn-prev" aria-controls="spotify-playlist" data-controls="spotify-playlist">
           <span class="visually-hidden">previous playlist</span>
@@ -207,7 +196,61 @@
     <hr>
   </div>
 
-  <script src="js/app.js"></script>
+  <div class="modal">
+    <h2 class="modal-title">Kindly Login or Sign up</h2>
+    <p>Login or Sign up to use this service. <strong>It's free!</strong></p>
+    <div class="modal-btns">
+      <button class="btn btn-secondary btn-close-modal">Not now</button>
+      <button class="btn btn-primary">Login</button>
+    </div>
+  </div>
+
+  <script src="js/app.js" type="module"></script>
+  <script type="module">
+    import { populateSection } from "./js/playlists.js";
+    const $playlistContainers = document.querySelectorAll(".grid-playlist");
+    const $prevBtns = document.querySelectorAll(".btn-prev");
+    const $nextBtns = document.querySelectorAll(".btn-next");
+
+    populateSection();
+
+    function isOverflown(element) {
+      return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+    }
+
+    function hideBtns() {
+      for (let i = 0; i < $prevBtns.length; i++) {
+        $prevBtns[i].style.display = "none";
+        $nextBtns[i].style.display = "none";
+      }
+    }
+
+    function showBtns() {
+      for (let i = 0; i < $prevBtns.length; i++) {
+        $prevBtns[i].style.display = "block";
+        $nextBtns[i].style.display = "block";
+      }
+    }
+
+    function handleScroll() {
+      if(window.innerWidth > 576){
+        $playlistContainers.forEach(container => {
+          if (isOverflown(container)) {
+            showBtns();
+          }
+          else {
+            hideBtns();
+          }
+        });
+      }
+    }
+
+    document.onload = handleScroll();
+
+    window.addEventListener('resize', () => {
+      handleScroll();
+    })
+  </script>
 </body>
 
 </html>
