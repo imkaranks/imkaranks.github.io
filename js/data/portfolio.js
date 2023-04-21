@@ -27,10 +27,10 @@ export default [
     },
     {
         id: 4,
-        title: "carousel",
-        content: "Lorem Ipsum is simply more dummy the industry.",
+        title: "netflix clone",
+        content: "Netflix clone using vanilla HTML, CSS & JS.",
         imgUrl: "./assets/icons/layout.svg",
-        projectUrl: "#",
+        projectUrl: "./projects/netflix-clone/index.html",
     },
     {
         id: 5,
