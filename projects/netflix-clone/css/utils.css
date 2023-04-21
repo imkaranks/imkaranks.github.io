@@ -1,0 +1,71 @@
+:root {
+  --clr-neutral-100-hsl: 0 0% 100%;
+  --clr-neutral-100: hsl(var(--clr-neutral-100-hsl));
+  --clr-neutral-200-hsl: 0 0% 87%;
+  --clr-neutral-200: hsl(var(--clr-neutral-200-hsl));
+  --clr-neutral-300-hsl: 0 0% 73%;
+  --clr-neutral-300: hsl(var(--clr-neutral-300-hsl));
+  --clr-neutral-800-hsl: 0 0% 5%;
+  --clr-neutral-800: hsl(var(--clr-neutral-800-hsl));
+  --clr-neutral-900-hsl: 0 0% 0;
+  --clr-neutral-900: hsl(var(--clr-neutral-800-hsl));
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+}
+
+.flex[data-spacing="sm"] {
+  --gap: 1rem;
+}
+
+.flex[data-spacing="md"] {
+  --gap: 2rem;
+}
+
+.flex[data-spacing="lg"] {
+  --gap: 3rem;
+}
+
+.flow>*+* {
+  margin-top: var(--flow-space, .5rem);
+}
+
+.flow[data-spacing="sm"] {
+  --flow-space: 1rem;
+}
+
+.flow[data-spacing="md"] {
+  --flow-space: 2rem;
+}
+
+.flow[data-spacing="lg"] {
+  --flow-space: 3rem;
+}
+
+.global-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.global-list {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
