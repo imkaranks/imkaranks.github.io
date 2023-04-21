@@ -76,6 +76,10 @@
 * Primary header end here
 */
 
+/**
+* Hero section start here
+*/
+
 .hero {
   min-height: 98vh;
   display: grid;
@@ -137,12 +141,15 @@
 }
 
 /**
-* Section header start here
+* Hero section end here
+*/
+
+/**
+* Movies section start here
 */
 
 .movies-section {
   position: relative;
-  /* overflow-x: scroll; */
 }
 
 .movies-section::-webkit-scrollbar {
@@ -150,7 +157,6 @@
 }
 
 .movies-row {
-  /* overflow-x: scroll; */
   transition: transform .3s ease;
   transform: translateX(0px);
 }
@@ -236,12 +242,15 @@
 
 .movies-item:hover,
 .movies-item:focus {
-  /* transform: translateY(-1rem) scale(1.1); */
   transform: scale(1.2);
 }
 
 /**
-* Section header end here
+* Movies section end here
+*/
+
+/**
+* iframe start here
 */
 
 iframe {
@@ -255,14 +264,6 @@ iframe {
   display: none;
 }
 
-.yt-close-btn {
-  border: 0;
-  border-radius: 50%;
-  position: fixed;
-  z-index: 999;
-  background-color: red;
-  width: 40px;
-  height: 40px;
-  right: 2.4rem;
-  top: 49%;
-}
+/**
+* iframe end here
+*/
