@@ -52,8 +52,6 @@ function buildHeroBanner(movie) {
   bannerCont.append(div);
 }
 
-// movie.overview && movie.overview.length > 200 ? movie.overview.slice(0,200).trim()+ '...':movie.overview
-
 function formatDescText(desc) {
   return desc && desc.length > 200
     ? desc.slice(0, 200).trim() + "..."
@@ -137,8 +135,6 @@ function searchYoutubeTrailer(movieName) {
     })
     .catch(err => console.error(err));
 }
-
-// https://www.youtube.com/watch?v=P3zn_ds448w
 
 window.addEventListener("load", loadApp);
 
