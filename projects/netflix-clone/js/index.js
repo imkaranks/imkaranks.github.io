@@ -63,7 +63,7 @@ const fetchAllCategories = async () => {
     const response = await fetch(apiPaths.allCategories);
     const { genres } = await response.json();
     if (Array.isArray(genres) && genres.length) {
-      genres.slice(0, 10).forEach(genre => {
+      genres.slice(0, 5).forEach(genre => {
         fetchMoviesList(genre.id, genre.name);
       });
     }
