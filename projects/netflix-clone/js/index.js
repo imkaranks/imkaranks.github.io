@@ -109,7 +109,7 @@ function buildMoviesItem(movie) {
       : "https://th.bing.com/th/id/R.def709d1791f697ec8fcd567f000493e?rik=2Zc62JV6sv5bvQ&riu=http%3a%2f%2fwww.magicdigitalalbum.com%2fphotos%2fphoto-not-available.jpg&ehk=WmCYeEe5ttrYIj6hft5TtG%2bC1whLC%2bY11rUZ5XbnBzI%3d&risl=&pid=ImgRaw&r=0";
   return (`
     <div class="movies-item" tabindex="0">
-      <img src=${movieImage} alt="${movie.title}" onClick="playYtTrailer('${movie.title ?? movie.name}')">
+      <img src=${movieImage} alt="${movie.title}" onClick="playYtTrailer('${movie.title ?? movie.name}')" loading="lazy">
     </div>`);
 }
 
