@@ -2,7 +2,7 @@ const apiKey = "92b32c6d76b6dd7cd754c111db77a6f9";
 const apiStartPoint = "https://api.themoviedb.org/3";
 const imgPath = "https://image.tmdb.org/t/p/original";
 const moviesWrapper = document.querySelector(".movies");
-
+const recentlyWatchedMovies = JSON.parse(localStorage.getItem('movies')) || [];
 let scrollPositions = {};
 
 const apiPaths = {
@@ -12,7 +12,8 @@ const apiPaths = {
   searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyBJl-siuihZ_XwBSiYLgS4Zhn6dTKXqoG8`
 }
 
-function loadApp() {
+function initializeApp() {
+  buildRecentlyWatched();
   fetchTrendingMovies();
   fetchAllCategories();
 }
@@ -22,7 +23,7 @@ const fetchTrendingMovies = async () => {
     const response = await fetch(apiPaths.trending);
     const { results: movies } = await response.json();
     const randomIndex = Math.floor(Math.random() * movies.length);
-    buildMoviesList(movies.slice(0, 5), 'Trending Now');
+    buildMoviesList(movies.slice(0, 8), 'Trending Now');
     buildHeroBanner(movies[randomIndex]);
   } catch (err) {
     console.error(err);
@@ -78,7 +79,7 @@ const fetchMoviesList = async (id, genreName) => {
     const response = await fetch(apiPaths.moviesList(id));
     const { results } = await response.json();
     if (Array.isArray(results) && results.length) {
-      buildMoviesList(results.slice(0, 5), genreName);
+      buildMoviesList(results.slice(0, 8), genreName);
     }
   } catch (err) {
     console.error(err);
@@ -107,13 +108,16 @@ function buildMoviesItem(movie) {
     movie.backdrop_path
       ? `${imgPath}${movie.backdrop_path}`
       : "https://th.bing.com/th/id/R.def709d1791f697ec8fcd567f000493e?rik=2Zc62JV6sv5bvQ&riu=http%3a%2f%2fwww.magicdigitalalbum.com%2fphotos%2fphoto-not-available.jpg&ehk=WmCYeEe5ttrYIj6hft5TtG%2bC1whLC%2bY11rUZ5XbnBzI%3d&risl=&pid=ImgRaw&r=0";
-  return (`
-    <div class="movies-item" tabindex="0">
-      <img src=${movieImage} alt="${movie.title}" onClick="playYtTrailer('${movie.title ?? movie.name}')" loading="lazy">
-    </div>`);
+
+  return `<div class="movies-item" tabindex="0">
+            <img src=${movieImage} alt="${movie.title}" onClick="playYtTrailer('${movie.title ?? movie.name}', '${movieImage}')" loading="lazy">
+          </div>`;
 }
 
-function playYtTrailer(movieName) {
+function playYtTrailer(movieName, movieImage=null) {
+  if (movieImage !== null) {
+    addToRecentlyWatched(movieName, movieImage); // added for feature test
+  }
   searchYoutubeTrailer(movieName)
     .then(videoId => {
       const video = document.querySelector('iframe');
@@ -136,7 +140,7 @@ function searchYoutubeTrailer(movieName) {
     .catch(err => console.error(err));
 }
 
-window.addEventListener("load", loadApp);
+window.addEventListener("load", initializeApp);
 
 const menuToggleBtn = document.querySelector(".primary-nav-toggle");
 const primaryNav = document.querySelector("#primary-nav");
@@ -152,7 +156,7 @@ menuToggleBtn.addEventListener("click", () => {
 
 function handlePrevBtn(control) {
   const section = document.getElementById(control);
-  if (scrollPositions[control] < 0 && section !== null) {
+  if (scrollPositions[control] < 0) {
     scrollPositions[control] += 260;
     section.style.transform = `translateX(${scrollPositions[control]}px)`;
   }
@@ -160,8 +164,43 @@ function handlePrevBtn(control) {
 
 function handleNextBtn(control) {
   const section = document.getElementById(control);
-  if (scrollPositions[control] > (section.clientWidth * (-1))) {
+  const availableSpace = (section.scrollWidth - section.clientWidth) * -1;
+  if (scrollPositions[control] > availableSpace) {
     scrollPositions[control] -= 260;
     section.style.transform = `translateX(${scrollPositions[control]}px)`;
+  }
+}
+
+function addToRecentlyWatched(movieName, movieImage) {
+  const newMovie = {
+    name: movieName,
+    imageURL: movieImage
+  }
+  if (recentlyWatchedMovies.length < 6) {
+    recentlyWatchedMovies.push(newMovie);
+  } else {
+    recentlyWatchedMovies.push(newMovie);
+    recentlyWatchedMovies.splice(0, 1);
+  }
+  localStorage.setItem('movies', JSON.stringify(recentlyWatchedMovies));
+  buildRecentlyWatched();
+}
+
+function buildRecentlyWatched() {
+  const $recentlyWatched = document.getElementById('recently-watched');
+  const $recentlyWatchedSection = document.querySelector('#recently-watched-section');
+  const movies = JSON.parse(localStorage.getItem('movies'));
+  console.log(movies);
+  if(movies?.length){
+    $recentlyWatchedSection.style.display = 'block';
+    $recentlyWatched.innerHTML = '';
+    movies.forEach(movie => {
+      $recentlyWatched.innerHTML += `
+        <div class="movies-item" tabindex="0" onClick="playYtTrailer('${movie.name}')">
+          <img src=${movie.imageURL} alt="${movie.name}">
+        </div>`;
+    });
+  } else {
+    $recentlyWatchedSection.style.display = 'none';
   }
 }
