@@ -177,10 +177,10 @@ function addToRecentlyWatched(movieName, movieImage) {
     imageURL: movieImage
   }
   if (recentlyWatchedMovies.length < 6) {
-    recentlyWatchedMovies.push(newMovie);
+    recentlyWatchedMovies.unshift(newMovie);
   } else {
-    recentlyWatchedMovies.push(newMovie);
-    recentlyWatchedMovies.splice(0, 1);
+    recentlyWatchedMovies.unshift(newMovie);
+    recentlyWatchedMovies.splice(5, 1);
   }
   localStorage.setItem('movies', JSON.stringify(recentlyWatchedMovies));
   buildRecentlyWatched();
