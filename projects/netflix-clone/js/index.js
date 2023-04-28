@@ -116,7 +116,7 @@ function buildMoviesItem(movie) {
 
 function playYtTrailer(movieName, movieImage=null) {
   if (movieImage !== null) {
-    addToRecentlyWatched(movieName, movieImage); // added for feature test
+    addToRecentlyWatched(movieName, movieImage);
   }
   searchYoutubeTrailer(movieName)
     .then(videoId => {
@@ -190,7 +190,7 @@ function buildRecentlyWatched() {
   const $recentlyWatched = document.getElementById('recently-watched');
   const $recentlyWatchedSection = document.querySelector('#recently-watched-section');
   const movies = JSON.parse(localStorage.getItem('movies'));
-  console.log(movies);
+
   if(movies?.length){
     $recentlyWatchedSection.style.display = 'block';
     $recentlyWatched.innerHTML = '';
