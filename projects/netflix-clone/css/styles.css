@@ -81,7 +81,7 @@
 */
 
 .hero {
-  min-height: 98vh;
+  min-height: calc(100vh - 65.92px);
   display: grid;
   place-items: center;
 }
@@ -147,6 +147,11 @@
 /**
 * Movies section start here
 */
+
+.movies {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
 .movies-section {
   position: relative;
@@ -243,6 +248,7 @@
 .movies-item:hover,
 .movies-item:focus {
   transform: scale(1.2);
+  z-index: 999;
 }
 
 /**
