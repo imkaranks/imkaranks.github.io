@@ -1,13 +1,8 @@
-// const classes = ["card-sm", "card-md", "card-lg"];
-const images = [
-    "https://images.unsplash.com/photo-1668099662579-793eeba940c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGNvb2xzJTIwdGh1bWJuYWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1542681575-352258e0c854?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fGNvb2xzJTIwdGh1bWJuYWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-];
 export default [
     {
         id: 1,
         title: "space tourism",
-        content: "Frontend Mentor - Space Tourism Website.",
+        content: "Frontend Mentor - Space Tourism Challenge.",
         imgUrl: "./assets/icons/layout.svg",
         projectUrl: "./projects/space-tourism/index.html",
     },
@@ -34,10 +29,10 @@ export default [
     },
     {
         id: 5,
-        title: "modal",
-        content: "Lorem Ipsum is simply more dummy the industry.",
+        title: "fylo landing page",
+        content: "Frontend Mentor - Fylo Landing Page Challenge.",
         imgUrl: "./assets/icons/layout.svg",
-        projectUrl: "#",
+        projectUrl: "https://main--beautiful-donut-56572b.netlify.app/",
     },
     {
         id: 6,
