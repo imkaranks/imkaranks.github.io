@@ -39,6 +39,6 @@ export default [
         title: "modern UI GPT-3",
         content: "Modern UI GPT-3 landing page using tailwindcss.",
         imgUrl: "./assets/icons/layout.svg",
-        projectUrl: "https://aquamarine-semolina-4c6518.netlify.app/",
+        projectUrl: "https://jazzy-griffin-0809be.netlify.app/",
     },
 ];
