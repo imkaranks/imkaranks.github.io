@@ -36,9 +36,9 @@ export default [
     },
     {
         id: 6,
-        title: "pagination",
-        content: "Lorem Ipsum is simply more dummy the industry.",
+        title: "modern UI GPT-3",
+        content: "Modern UI GPT-3 landing page using tailwindcss.",
         imgUrl: "./assets/icons/layout.svg",
-        projectUrl: "#",
+        projectUrl: "https://aquamarine-semolina-4c6518.netlify.app/",
     },
 ];
