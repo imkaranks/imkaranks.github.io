@@ -41,4 +41,11 @@ export default [
         imgUrl: "./assets/icons/layout.svg",
         projectUrl: "https://jazzy-griffin-0809be.netlify.app/",
     },
+    {
+        id: 7,
+        title: "multi step form",
+        content: "Frontend Mentor - Multi Step Form Challenge.",
+        imgUrl: "./assets/icons/layout.svg",
+        projectUrl: "https://unique-chaja-2c30bf.netlify.app/",
+    },
 ];
