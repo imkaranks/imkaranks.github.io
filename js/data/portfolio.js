@@ -48,4 +48,11 @@ export default [
         imgUrl: "./assets/icons/layout.svg",
         projectUrl: "https://unique-chaja-2c30bf.netlify.app/",
     },
+    {
+        id: 8,
+        title: "e-commerce page",
+        content: "Frontend Mentor - E-commerce Page Challenge.",
+        imgUrl: "./assets/icons/layout.svg",
+        projectUrl: "https://lively-gumdrop-603877.netlify.app/",
+    },
 ];
