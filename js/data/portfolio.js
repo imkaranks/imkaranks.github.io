@@ -25,7 +25,7 @@ export default [
         title: "netflix clone",
         content: "Netflix clone using vanilla HTML, CSS & JS.",
         imgUrl: "./assets/icons/layout.svg",
-        projectUrl: "./projects/netflix-clone/index.html",
+        projectUrl: "https://chic-nasturtium-3b31e3.netlify.app/",
     },
     {
         id: 5,
