@@ -23,7 +23,7 @@ export default [
     {
         id: 4,
         title: "netflix clone",
-        content: "Netflix clone using vanilla HTML, CSS & JS.",
+        content: "Netflix clone using React, Tailwind & Framer.",
         imgUrl: "./assets/icons/layout.svg",
         projectUrl: "https://chic-nasturtium-3b31e3.netlify.app/",
     },
@@ -55,4 +55,11 @@ export default [
         imgUrl: "./assets/icons/layout.svg",
         projectUrl: "https://lively-gumdrop-603877.netlify.app/",
     },
+    {
+        id: 9,
+        title: "to-do app",
+        content: "Simple To do App using React & Tailwind.",
+        imgUrl: "./assets/icons/layout.svg",
+        projectUrl: "https://eclectic-mochi-b99ddc.netlify.app/",
+    }
 ];
