@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Bellefair&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/boilerplate.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/utils.css">
+
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="bg-layout bg-layout--technology">
+  <header class="header header--primary flex items-center">
+    <div class="logo">
+      <img src="./assets/shared/logo.svg" alt="space tourism logo">
+    </div>
+
+    <button class="btn btn--menu" aria-controls="primary-navigation">
+      <span class="sr-only">Menu Button</span>
+    </button>
+
+    <nav class="nav nav--primary" data-expanded="false" id="primary-navigation">
+      <span class="sr-only">Main Menu</span>
+      <ul class="nav__list nav__list--primary letter-space-400 font-primary-cond flex uppercase" role="list">
+        <li>
+          <a href="./index.html" data-active="false" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">00</span> Home
+          </a>
+        </li>
+        <li>
+          <a href="./destination.html" data-active="false" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">01</span> Destination
+          </a>
+        </li>
+        <li>
+          <a href="./crew.html" data-active="false" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">02</span> Crew
+          </a>
+        </li>
+        <li>
+          <a href="./technology.html" data-active="true" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">03</span> Technology
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main technology">
+    <div class="container grid grid--technology">
+      <h1 class="numbered-title span-entire uppercase text-500 font-primary-cond letter-space-600 text-white">
+        <span class="numbered-text bold" aria-hidden="true">03</span> Space launch 101
+      </h1>
+
+      <div class="grid grid-technology-article">
+        <div class="tab-list tab-list--technology flex" aria-label="technology list">
+          <button class="btn btn--rounded text-light font-primary-cond letter-space-500" data-active="true"
+            data-controls="Launch vehicle">
+            <span class="sr-only">About Launch vehicle</span>
+            <span aria-hidden="true" data-controls="Launch vehicle">1</span>
+          </button>
+          <button class="btn btn--rounded text-light font-primary-cond letter-space-500" data-active="false"
+            data-controls="Spaceport">
+            <span class="sr-only">About Spaceport</span>
+            <span aria-hidden="true" data-controls="Spaceport">2</span>
+          </button>
+          <button class="btn btn--rounded text-light font-primary-cond letter-space-500" data-active="false"
+            data-controls="Space capsule">
+            <span class="sr-only">About Space capsule</span>
+            <span aria-hidden="true" data-controls="Space capsule">3</span>
+          </button>
+        </div>
+        <article class="technology-article flow" data-spacing="md">
+          <div class="text-600 font-accent text-light uppercase flow" data-spacing="sm">
+            <h2 class="text-400">The terminology...</h2>
+            <p class="technology-name text-700 text-white">Launch vehicle</p>
+          </div>
+          <p class="technology-description">
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
+            payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+            WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+            it's quite an awe-inspiring sight on the launch pad!
+          </p>
+        </article>
+      </div>
+      <div>
+        <picture>
+          <source media="(min-width: 62em)" srcset="./assets/technology/image-launch-vehicle-portrait.jpg">
+          <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="launch-vehicle-landscape">
+        </picture>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

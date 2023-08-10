@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
@@ -12,47 +12,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Bellefair&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/boilerplate.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/utils.css">
 
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-
-<body class="bg bg--home">
+<body class="bg-layout bg-layout--home">
   <header class="header header--primary flex items-center">
     <div class="logo">
       <img src="./assets/shared/logo.svg" alt="space tourism logo">
     </div>
 
     <button class="btn btn--menu" aria-controls="primary-navigation">
-      <span class="sr-only">Menu</span>
+      <span class="sr-only">Menu Button</span>
     </button>
 
     <nav class="nav nav--primary" data-expanded="false" id="primary-navigation">
-      <ul class="nav__list nav__list--primary letter-space-400 font-barlow-cond flex uppercase" role="list">
+      <span class="sr-only">Main Menu</span>
+      <ul class="nav__list nav__list--primary letter-space-400 font-primary-cond flex uppercase" role="list">
         <li>
-          <a href="./index.html" data-selected="true" class="nav__link text-light">
-            <span class="nav__link--number text-white" aria-hidden="true">00</span> Home
+          <a href="./index.html" data-active="true" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">00</span> Home
           </a>
         </li>
         <li>
-          <a href="./destination.html" data-selected="false" class="nav__link text-light">
-            <span class="nav__link--number text-white" aria-hidden="true">01</span> Destination
+          <a href="./destination.html" data-active="false" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">01</span> Destination
           </a>
         </li>
         <li>
-          <a href="" data-selected="false" class="nav__link text-light">
-            <span class="nav__link--number text-white" aria-hidden="true">02</span> Crew
+          <a href="./crew.html" data-active="false" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">02</span> Crew
           </a>
         </li>
         <li>
-          <a href="" data-selected="false" class="nav__link text-light">
-            <span class="nav__link--number text-white" aria-hidden="true">03</span> Technology
-          </a>
-        </li>
-        <li>
-          <a href="../../index.html" data-selected="false" class="nav__link text-light">
-            <span class="nav__link--number text-white" aria-hidden="true">04</span> Portfolio
+          <a href="./technology.html" data-active="false" class="nav__link text-light global-link">
+            <span class="numbered-link text-white" aria-hidden="true">03</span> Technology
           </a>
         </li>
       </ul>
@@ -60,13 +55,13 @@
   </header>
 
   <main class="main home">
-    <div class="wrapper grid grid-two-cols">
-      <div class="flow" style="--flow-space: 1rem">
-        <h1 class="home__title text-500 font-barlow-cond letter-space-600 uppercase">
+    <div class="container grid grid-two-cols">
+      <div class="flow" data-spacing="sm">
+        <h1 class="home__title text-500 font-primary-cond letter-space-600 uppercase">
           So, you want to travel to<br>
-          <span class="text-900 font-bellefair letter-space-none">Space</span>
+          <span class="text-900 font-accent letter-space-none">Space</span>
         </h1>
-        <p>
+        <p class="home__para">
           Let’s face it; if you want to go to space, you might as well genuinely go to
           outer space and not hover kind of on the edge of it. Well sit back, and relax
           because we’ll give you a truly out of this world experience!
@@ -79,7 +74,6 @@
     </div>
   </main>
 
-  <script src="./js/app.js" type="module"></script>
+  <script src="js/index.js"></script>
 </body>
-
 </html>

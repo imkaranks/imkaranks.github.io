@@ -227,6 +227,7 @@
     color: #fff;
 }
 .nav__link {
+    height: 72.8px;
     text-decoration: none;
     transition: color .3s ease;
 }
@@ -241,12 +242,11 @@
     color: #f5f5f5;
 }
 .active::before {
-    --pos-y: calc(((72.8px - 1.5rem) / 2)*-1);
     content: '';
     position: absolute;
     background-color: #1b1b1b;
-    top: var(--pos-y);
-    bottom: var(--pos-y);
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     width: 100%;

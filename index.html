@@ -7,12 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/boilerplate.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/utils.css">
@@ -29,20 +25,20 @@
       <div class="header__content inset-0 stack-5" style="bottom: unset;">
         <div class="container flex items-center" style="gap:0">
           <a href="#" class="text-neutral-100 text-xl font-heading uppercase text-heading" style="text-decoration: none;">karan<span class="text-accent">sethi</span></a>
-          <nav class="nav primary-nav stack-4" role="list">
+          <nav class="nav primary-nav stack-4" id="primary-nav" role="list" aria-label="Primary">
             <ul class="nav__list primary-nav-list text-sm flex" role="list">
-              <li class="nav__item active"><a href="#home" class="nav__link text-content">Home</a></li>
-              <li class="nav__item"><a href="#portfolio" class="nav__link text-content">Works</a></li>
-              <li class="nav__item"><a href="#skills" class="nav__link text-content">Skills</a></li>
-              <li class="nav__item"><a href="#services" class="nav__link text-content">Services</a></li>
-              <li class="nav__item"><a href="#about" class="nav__link text-content">About</a></li>
-              <li class="nav__item"><a href="#contact" class="nav__link text-content">Contact</a></li>
+              <li class="nav__item active"><a href="#home" class="nav__link flex justify-center items-center text-content">Home</a></li>
+              <li class="nav__item"><a href="#portfolio" class="nav__link flex justify-center items-center text-content">Works</a></li>
+              <li class="nav__item"><a href="#skills" class="nav__link flex justify-center items-center text-content">Skills</a></li>
+              <li class="nav__item"><a href="#services" class="nav__link flex justify-center items-center text-content">Services</a></li>
+              <li class="nav__item"><a href="#about" class="nav__link flex justify-center items-center text-content">About</a></li>
+              <li class="nav__item"><a href="#contact" class="nav__link flex justify-center items-center text-content">Contact</a></li>
             </ul>
           </nav>
           <div class="flex">
             <button style="font-size: .65rem;" class="button button--secondary uppercase" title="download cv">Download CV</button>
-            <button class="btn--menu relative stack-5 text-xl text-neutral-100" title="toggle menu">
-              <span class="sr-only">menu</span>
+            <button class="btn--menu relative stack-5 text-xl text-neutral-100" aria-expanded="false" aria-controls="primary-nav">
+              <span class="sr-only">Menu</span>
               <i class="fas fa-bars"></i>
             </button>
           </div>
@@ -56,7 +52,7 @@
           <div class="hero__content text-center flow" style="--flow-space:1rem">
             <header class="section-header flex flow" style="--flow-space:1rem;--gap: 1rem">
               <h1 class="hero__title text-neutral-100 font-heading uppercase">
-                <span class="hero__word rotateX">crafting</span>
+                <span class="hero__headline animate-rotate">crafting</span>
               </h1>
               <p class="hero__subtitle text-neutral-200 text-semibold font-heading uppercase leading-none">
                 hey i'm a frontend developer

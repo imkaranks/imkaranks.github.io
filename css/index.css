@@ -14,12 +14,12 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 50%;
+        left: 30%;
         transition: transform .3s ease;
         transform: translateX(100%);
     }
     .primary-nav-list {
-        --gap: 2rem;
+        --gap: 0rem;
         min-height: 100%;
         flex-direction: column;
         font-weight: 600;
@@ -70,12 +70,12 @@
     border-radius: 50%;
 }
 /* home */
-.rotateX {
+.animate-rotate {
     display: block;
     transform: rotateX(0deg);
-    animation: horizontalSpin 1s linear infinite alternate;
+    animation: text-rotate 1s linear infinite alternate;
 }
-@keyframes horizontalSpin {
+@keyframes text-rotate {
     0% {
         transform: rotateX(90deg);
     }
