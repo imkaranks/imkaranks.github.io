@@ -1,257 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/boilerplate.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <title>Karan Sethi | Frontend Developer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/boilerplate.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/utils.css">
-  <title>Karan Sethi | Frontend Developer</title>
-</head>
-
-<body class="light text-content">
-  <div class="banner relative" id="home">
-    <button class="btn--theme stack-4 text-heading bg-accent flex justify-center items-center" title="theme mode">
-      <span class="sr-only">Theme</span>
-      <svg data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color:currentColor"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2"></path><path d="M12 21v2"></path><path d="M4.22 4.22l1.42 1.42"></path><path d="M18.36 18.36l1.42 1.42"></path><path d="M1 12h2"></path><path d="M21 12h2"></path><path d="M4.22 19.78l1.42-1.42"></path><path d="M18.36 5.64l1.42-1.42"></path></svg>
-    </button>
-    <header class="header">
-      <div class="header__content inset-0 stack-5" style="bottom: unset;">
-        <div class="container flex items-center" style="gap:0">
-          <a href="#" class="text-neutral-100 text-xl font-heading uppercase text-heading" style="text-decoration: none;">karan<span class="text-accent">sethi</span></a>
-          <nav class="nav primary-nav stack-4" id="primary-nav" role="list" aria-label="Primary">
-            <ul class="nav__list primary-nav-list text-sm flex" role="list">
-              <li class="nav__item active"><a href="#home" class="nav__link flex justify-center items-center text-content">Home</a></li>
-              <li class="nav__item"><a href="#portfolio" class="nav__link flex justify-center items-center text-content">Works</a></li>
-              <li class="nav__item"><a href="#skills" class="nav__link flex justify-center items-center text-content">Skills</a></li>
-              <li class="nav__item"><a href="#services" class="nav__link flex justify-center items-center text-content">Services</a></li>
-              <li class="nav__item"><a href="#about" class="nav__link flex justify-center items-center text-content">About</a></li>
-              <li class="nav__item"><a href="#contact" class="nav__link flex justify-center items-center text-content">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="flex">
-            <button style="font-size: .65rem;" class="button button--secondary uppercase" title="download cv">Download CV</button>
-            <button class="btn--menu relative stack-5 text-xl text-neutral-100" aria-expanded="false" aria-controls="primary-nav">
-              <span class="sr-only">Menu</span>
-              <i class="fas fa-bars"></i>
-            </button>
+  <body class="light text-content">
+    <div class="banner relative" data-scroll-section id="home">
+      <header class="header">
+        <div class="header__content inset-0 stack-5" style="bottom: unset;">
+          <div class="container flex items-center" style="gap: 0;">
+            <a href="#" class="text-neutral-100 text-xl font-heading uppercase text-heading" style="text-decoration: none;">karan<span class="text-accent">sethi</span></a>
+            <nav class="nav primary-nav stack-4" id="primary-nav" role="list" aria-label="Primary">
+              <ul class="nav__list primary-nav-list text-sm flex" role="list">
+                <li class="nav__item active"><a href="#home" class="nav__link flex justify-center items-center text-content">Home</a></li>
+                <li class="nav__item"><a href="#portfolio" class="nav__link flex justify-center items-center text-content">Works</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link flex justify-center items-center text-content">Skills</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link flex justify-center items-center text-content">Services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link flex justify-center items-center text-content">About</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link flex justify-center items-center text-content">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="flex">
+              <button style="font-size: 0.65rem;" class="button button--secondary uppercase" title="download cv">Download CV</button>
+              <button class="btn--menu relative stack-5 text-xl text-neutral-100" aria-expanded="false" aria-controls="primary-nav">
+                <span class="visually-hidden">Menu</span>
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-    <!-- Hero -->
-    <div class="grid banner-grid">
-      <section class="hero relative grid items-center" style="--gap:0">
-        <div class="container hero-container">
-          <div class="hero__content text-center flow" style="--flow-space:1rem">
-            <header class="section-header flex flow" style="--flow-space:1rem;--gap: 1rem">
-              <h1 class="hero__title text-neutral-100 font-heading uppercase">
-                <span class="hero__headline animate-rotate">crafting</span>
-              </h1>
-              <p class="hero__subtitle text-neutral-200 text-semibold font-heading uppercase leading-none">
-                hey i'm a frontend developer
+      </header>
+      <!-- Hero -->
+      <div class="grid banner-grid" data-scroll-section>
+        <section class="hero relative grid items-center" style="--gap: 0;">
+          <div class="container hero-container">
+            <div class="hero__content text-center flow" style="--flow-space: 1rem;">
+              <header class="section-header flex flow" style="--flow-space: 1rem; --gap: 1rem;">
+                <h1 class="hero__title text-neutral-100 font-heading uppercase">
+                  <span class="hero__headline">crafting</span>
+                </h1>
+                <p class="hero__subtitle text-neutral-200 text-semibold font-heading uppercase leading-heading">
+                  hey i'm a frontend developer
+                </p>
+              </header>
+              <p class="word-limit mx-auto text-neutral-200">
+                Crafting beautiful user experiences that provide value.
               </p>
-            </header>
-            <p class="word-limit mx-auto text-neutral-200">
-              Crafting beautiful user experiences that provide value.
-            </p>
+            </div>
           </div>
+        </section>
+        <div class="scroll-icon text-neutral-200 flex items-center text-sm" style="--gap: 0.25em;">
+          <span>scroll down</span>
+          <i class="fa fa-arrow-down"></i>
         </div>
-      </section>
-      <div class="scroll-icon text-neutral-200 flex items-center text-sm" style="--gap:0.25em">
-        <span>scroll down</span>
-        <i class="fa fa-arrow-down"></i>
       </div>
+      <!-- /.Hero -->
+      <img
+        src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJlYXV0aWZ1bCUyMGludGVyZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        class="hero__image absolute inset-0 stack-(-2)"
+        alt="..."
+      />
     </div>
-    <!-- /.Hero -->
-    <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJlYXV0aWZ1bCUyMGludGVyZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="hero__image absolute inset-0 stack-(-2)" alt="...">
-  </div>
-  <section class="section portfolio" id="portfolio">
-    <div class="container grid grid-layout items-center">
-      <header class="section-header flow">
-        <h2 class="section-title text-heading text-3xl font-heading uppercase">works</h2>
-        <p>
-          Glimpse of my some previous works click on them for live working demo.
-        </p>
-        <button class="button button--primary uppercase">see all works</button>
-      </header>
-      <div class="portfolio-cards grid grid-auto">
+    <button class="btn--theme stack-4 text-heading bg-accent flex justify-center items-center" title="Theme Mode">
+      <span class="visually-hidden">Theme</span>
+      <svg
+        data-testid="geist-icon"
+        fill="none"
+        height="24"
+        shape-rendering="geometricPrecision"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        width="24"
+        style="color: currentColor;"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <path d="M12 1v2"></path>
+        <path d="M12 21v2"></path>
+        <path d="M4.22 4.22l1.42 1.42"></path>
+        <path d="M18.36 18.36l1.42 1.42"></path>
+        <path d="M1 12h2"></path>
+        <path d="M21 12h2"></path>
+        <path d="M4.22 19.78l1.42-1.42"></path>
+        <path d="M18.36 5.64l1.42-1.42"></path>
+      </svg>
+    </button>
+    <section class="section portfolio" data-scroll-section id="portfolio">
+      <div class="container grid grid-layout items-center">
+        <header class="section-header flow">
+          <h2 class="section-title text-heading text-3xl font-heading uppercase">works</h2>
+          <p>
+            Glimpse of my some previous works click on them for live working demo.
+          </p>
+          <button class="button button--primary uppercase">see all works</button>
+        </header>
+        <div class="portfolio-cards grid grid-flexible"></div>
       </div>
-    </div>
-  </section>
-  <section class="section skills" id="skills">
-    <div class="container flow">
-      <header class="section-header flow text-center">
-        <h2 class="section-title text-heading text-3xl font-heading uppercase">my expertise</h2>
-        <p class="word-limit mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos inventore? Non incidunt dolores quidem corrupti, repudiandae velit saepe modi!</p>
-      </header>
-       <div class="progress-cards grid grid-cols-2">
-        <div class="progress">
-          <div class="progress__text text-lg text-semibold">HTML 5</div>
-          <div class="progress__bar relative" style="--expertise: 75%"></div>
-        </div>
-        <div class="progress">
-          <div class="progress__text text-lg text-semibold">CSS</div>
-          <div class="progress__bar relative" style="--expertise: 80%"></div>
-        </div>
-        <div class="progress">
-          <div class="progress__text text-lg text-semibold">JavaScript</div>
-          <div class="progress__bar relative" style="--expertise: 70%"></div>
-        </div>
-        <div class="progress">
-          <div class="progress__text text-lg text-semibold">React</div>
-          <div class="progress__bar relative" style="--expertise: 40%"></div>
-        </div>
-        <div class="progress">
-          <div class="progress__text text-lg text-semibold">tailwindcss</div>
-          <div class="progress__bar relative" style="--expertise: 60%"></div>
-        </div>
-        <div class="progress">
-          <div class="progress__text text-lg text-semibold">PHP</div>
-          <div class="progress__bar relative" style="--expertise: 80%"></div>
-        </div>
-       </div>
-    </div>
-  </section>
-  <section class="section services relative text-neutral-200" id="services">
-    <div class="container grid grid-layout items-center">
-      <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="absolute inset-0 stack-(-2) services__banner" alt="hands working on a laptop">
-      <header class="section-header flow">
-        <h2 class="section-title text-neutral-100 text-3xl font-heading uppercase">services</h2>
-        <p>
-          I aimed towards client's satifaction without compromising quality over quantity and help them to craft
-          impactful presence online.
-        </p>
-      </header>
-      <div class="service-cards grid grid-auto"></div>
-    </div>
-  </section>
-  <section class="section about relative" id="about">
-    <div class="container grid grid-cols-2">
-      <div class="about__content flow" style="--flow-space: 2rem">
-        <h2 class="section-title text-heading text-3xl font-heading uppercase">about me</h2>
-        <p>
-          I am an Indian based front end developer focused on crafting clean and user friendly experiences. I am
-          passionate about turning complex problems into simple, aesthetically pleasing and intuitive designs.
-        </p>
-        <p>
-          A developer who aimed towards providing value through his works and writing efficient code with best
-          practices.
-        </p>
-        <button class="button button--primary uppercase" title="hire me">Hire me</button>
-      </div>
-      <img src="https://images.unsplash.com/photo-1618498081964-ab0c002e0935?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXlzdGVyaW91cyUyMG1hbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="about__image absolute inset-0" style="left: unset;" alt="">
-    </div>
-  </section>
-  <section class="section contact" id="contact">
-    <div class="container flow grid grid-cols-2">
-      <header class="section-header col-span-full">
-        <h2 class="section-title text-heading text-3xl font-heading uppercase word-limit" style="--word-limit: 20ch">get in touch</h2>
-        <p>let's work together projects just send me email here</p>
-      </header>
-      <div class="contact-card flow">
-        <div class="contact-item">
-          <h2 class="font-heading text-md uppercase">Email</h2>
-          <div class="flex text-sm items-center" style="--gap:.5em">
-            <i class="fa fa-envelope text-accent" aria-hidden="true"></i>
-            <p>karansethi@test.com</p>
+    </section>
+    <section class="section skills" data-scroll-section id="skills">
+      <div class="container flow">
+        <header class="section-header flow text-center">
+          <h2 class="section-title text-heading text-3xl font-heading uppercase">my expertise</h2>
+          <p class="word-limit mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dignissimos inventore? Non incidunt dolores quidem corrupti, repudiandae velit saepe modi!</p>
+        </header>
+        <div class="progress-cards grid grid-cols-2">
+          <div class="progress">
+            <div class="progress__text text-lg text-semibold">HTML 5</div>
+            <div class="progress__bar relative" style="--expertise: 75%;"></div>
           </div>
-        </div>
-        <div class="contact-item">
-          <h2 class="font-heading text-md uppercase">City</h2>
-          <div class="flex text-sm items-center" style="--gap:.5em">
-            <i class="fa-regular fa-address-book text-accent"></i>
-            <address>New Delhi</address>
+          <div class="progress">
+            <div class="progress__text text-lg text-semibold">CSS/tailwindcss</div>
+            <div class="progress__bar relative" style="--expertise: 80%;"></div>
           </div>
-        </div>
-        <div class="contact-item">
-          <h2 class="font-heading text-md uppercase">Phone</h2>
-          <div class="flex text-sm items-center" style="--gap:.5em">
-            <i class="fa fa-phone text-accent" aria-hidden="true"></i>
-            <p>+91 9876543210</p>
+          <div class="progress">
+            <div class="progress__text text-lg text-semibold">JavaScript</div>
+            <div class="progress__bar relative" style="--expertise: 70%;"></div>
+          </div>
+          <div class="progress">
+            <div class="progress__text text-lg text-semibold">React</div>
+            <div class="progress__bar relative" style="--expertise: 60%;"></div>
+          </div>
+          <div class="progress">
+            <div class="progress__text text-lg text-semibold">Node/Express</div>
+            <div class="progress__bar relative" style="--expertise: 30%;"></div>
+          </div>
+          <div class="progress">
+            <div class="progress__text text-lg text-semibold">MongoDB</div>
+            <div class="progress__bar relative" style="--expertise: 50%;"></div>
           </div>
         </div>
       </div>
-      <form class="form grid">
-        <div class="form-group">
-          <label for="firstName" class="uppercase font-heading text-semibold">name</label>
-          <input type="text" id="firstName" name="firstName" class="form-input">
+    </section>
+    <section class="section services relative text-neutral-200" data-scroll-section id="services">
+      <div class="container grid grid-layout items-center">
+        <img
+          src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+          class="absolute inset-0 stack-(-2) services__banner"
+          alt="hands working on a laptop"
+        />
+        <header class="section-header flow">
+          <h2 class="section-title text-neutral-100 text-3xl font-heading uppercase">services</h2>
+          <p>
+            I aimed towards client's satifaction without compromising quality over quantity and help them to craft impactful presence online.
+          </p>
+        </header>
+        <div class="service-cards grid grid-flexible"></div>
+      </div>
+    </section>
+    <section class="section about relative" data-scroll-section id="about">
+      <div class="container grid grid-cols-2">
+        <div class="about__content flow" style="--flow-space: 2rem;">
+          <h2 class="section-title text-heading text-3xl font-heading uppercase">about me</h2>
+          <p>
+            I am an Indian based front end developer focused on crafting clean and user friendly experiences. I am passionate about turning complex problems into simple, aesthetically pleasing and intuitive designs.
+          </p>
+          <p>
+            A developer who aimed towards providing value through his works and writing efficient code with best practices.
+          </p>
+          <button class="button button--primary uppercase" title="hire me">Hire me</button>
         </div>
-        <div class="form-group">
-          <label for="email" class="uppercase font-heading text-semibold">email</label>
-          <input type="email" id="email" name="email" class="form-input">
+        <img
+          src="https://images.unsplash.com/photo-1631194297638-79260fd017c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG15c3RlcnklMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+          class="about__image absolute inset-0"
+          style="left: unset;"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="section contact" data-scroll-section id="contact">
+      <div class="container flow grid grid-cols-2">
+        <header class="section-header col-span-full">
+          <h2 class="section-title text-heading text-3xl font-heading uppercase word-limit" style="--word-limit: 20ch;">
+            get in touch
+          </h2>
+          <p>let's work together projects just send me email here</p>
+        </header>
+        <div class="contact-card flow">
+          <div class="contact-item">
+            <h2 class="font-heading text-md uppercase">Email</h2>
+            <div class="flex text-sm items-center" style="--gap: 0.5em;">
+              <i class="fa fa-envelope text-accent" aria-hidden="true"></i>
+              <p>karansethi@test.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <h2 class="font-heading text-md uppercase">City</h2>
+            <div class="flex text-sm items-center" style="--gap: 0.5em;">
+              <i class="fa-regular fa-address-book text-accent"></i>
+              <address style="font-style: normal;">New Delhi</address>
+            </div>
+          </div>
+          <div class="contact-item">
+            <h2 class="font-heading text-md uppercase">Phone</h2>
+            <div class="flex text-sm items-center" style="--gap: 0.5em;">
+              <i class="fa fa-phone text-accent" aria-hidden="true"></i>
+              <p>+91 9876543210</p>
+            </div>
+          </div>
         </div>
-        <div class="form-group col-span-full">
-          <label for="comments" class="uppercase font-heading text-semibold">message</label>
-          <textarea name="comments" id="comments" cols="30" rows="3" class="form-textarea"></textarea>
+        <form class="form grid">
+          <div class="form-group">
+            <label for="firstName" class="uppercase font-heading text-semibold">name</label>
+            <input type="text" id="firstName" name="firstName" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="uppercase font-heading text-semibold">email</label>
+            <input type="email" id="email" name="email" class="form-input" />
+          </div>
+          <div class="form-group col-span-full">
+            <label for="comments" class="uppercase font-heading text-semibold">message</label>
+            <textarea name="comments" id="comments" cols="30" rows="3" class="form-textarea"></textarea>
+          </div>
+          <div>
+            <button class="button button--primary uppercase" title="send message">send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer bg-surface" data-scroll-section>
+      <div class="container section grid footer-container" style="--padding-block: 2rem;">
+        <div class="footer__socials flow" style="--flow-space: 1rem;">
+          <h2 class="text-3xl font-heading">Karan Sethi<span class="text-accent">.</span></h2>
+          <div class="socials flex text-sm">
+            <div>Twitter</div>
+            <div>Instagram</div>
+            <div>Linkedin</div>
+            <div>Github</div>
+          </div>
         </div>
-        <div>
-          <button class="button button--primary uppercase" title="send message">send message</button>
-        </div>
-      </form>
-    </div>
-  </section>
-  <footer class="footer bg-surface">
-    <div class="container section grid footer-container" style="--padding-block: 2rem">
-      <div class="footer__socials flow" style="--flow-space:1rem">
-        <h2 class="text-4xl font-heading">Karan Sethi<span class="text-accent">.</span></h2>
-        <div class="socials flex">
-          <div>Twitter</div>
-          <div>Instagram</div>
-          <div>Linkedin</div>
-          <div>Github</div>
+        <div class="grid grid-cols-3">
+          <div class="back-to-top col-span-full">
+            <a href="#home" class="btn--goTop text-sm text-content uppercase text-semibold"> return to top <i class="fa-solid fa-chevron-up"></i> </a>
+          </div>
+          <div class="flow" style="--flow-space: 1rem;">
+            <h3 class="font-heading text-xl">Overview</h3>
+            <ul class="nav__list text-sm" role="list">
+              <li class="nav__item"><a href="#" class="nav__link text-content">Home</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Works</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Services</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">About</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Contact</a></li>
+            </ul>
+          </div>
+          <div class="flow" style="--flow-space: 1rem;">
+            <h3 class="font-heading text-xl">About</h3>
+            <ul class="nav__list text-sm" role="list">
+              <li class="nav__item"><a href="#" class="nav__link text-content">Privacy Notice</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Terms of use</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Our Company</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Careers</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Internet based ads</a></li>
+            </ul>
+          </div>
+          <div class="flow" style="--flow-space: 1rem;">
+            <h3 class="font-heading text-xl">Connect</h3>
+            <ul class="nav__list text-sm" role="list">
+              <li class="nav__item"><a href="#" class="nav__link text-content">Email Newsletter</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Github</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Linkedin</a></li>
+              <li class="nav__item"><a href="#" class="nav__link text-content">Twitter</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="grid grid-cols-3">
-        <div class="back-to-top col-span-full">
-          <a href="#home" class="btn--goTop text-sm text-content uppercase text-semibold">
-            return to top <i class="fa-solid fa-chevron-up"></i>
-          </a>
-        </div>
-        <div class="flow" style="--flow-space:1rem">
-          <h3 class="font-heading text-xl">Overview</h3>
-          <ul class="nav__list" role="list">
-            <li class="nav__item"><a href="#" class="nav__link text-content">Home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Works</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Services</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">About</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Contact</a></li>
-          </ul>
-        </div>
-        <div class="flow" style="--flow-space:1rem">
-          <h3 class="font-heading text-xl">About</h3>
-          <ul class="nav__list" role="list">
-            <li class="nav__item"><a href="#" class="nav__link text-content">Privacy Notice</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Terms of use</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Our Company</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Careers</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Internet based ads</a></li>
-          </ul>
-        </div>
-        <div class="flow" style="--flow-space:1rem">
-          <h3 class="font-heading text-xl">Connect</h3>
-          <ul class="nav__list" role="list">
-            <li class="nav__item"><a href="#" class="nav__link text-content">Email Newsletter</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Github</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Linkedin</a></li>
-            <li class="nav__item"><a href="#" class="nav__link text-content">Twitter</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <center>
-      <small class="text-sm uppercase">
-        crafted with ❤️ by karan sethi
-      </small>
-    </center>
-  </footer>
-  <script src="js/index.js" type="module"></script>
-</body>
+      <center>
+        <small class="text-sm uppercase">
+          crafted with ❤️ by karan sethi
+        </small>
+      </center>
+    </footer>
+    <div id="cursor" style="opacity: 0;" aria-hidden="true"></div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/index.js" type="module"></script>
+  </body>
 </html>

@@ -232,7 +232,7 @@
   }
 }
 
-.sr-only {
+.visually-hidden {
   position: absolute;
   left: -10000px;
   top: auto;

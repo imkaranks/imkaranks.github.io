@@ -6,6 +6,10 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+*::selection {
+  background-color: var(--clr-heading);
+  color: var(--clr-background);
+}
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
@@ -21,7 +25,7 @@ body {
   min-height: 100vh;
   background-color: var(--clr-background);
   text-rendering: optimizeSpeed;
-  line-height: 1.7;
+  line-height: var(--leading-content);
   font-family: var(--ff-primary);
   font-weight: 300;
 }
@@ -56,11 +60,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.leading-none,
+.leading-heading,
 h1,
 h2,
 h3,
 h4,
 h5 {
-  line-height: 1.1;
+  line-height: var(--leading-heading);
 }
