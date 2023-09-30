@@ -9,10 +9,10 @@
     },
     {
       "id": 2,
-      "title": "disney API",
-      "content": "Search your favourite Disney characters.",
+      "title": "Two Good Co Clone",
+      "content": "Two Good Co website clone with GSAP & locomotive.",
       "imgUrl": "./assets/icons/layout.svg",
-      "projectUrl": "./projects/disney-api/index.html"
+      "projectUrl": "https://imkaranks.github.io/two-good-co-clone/"
     },
     {
       "id": 3,
